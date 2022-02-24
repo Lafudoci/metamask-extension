@@ -744,9 +744,6 @@
   "save": {
     "message": "ಉಳಿಸು"
   },
-  "saveAsCsvFile": {
-    "message": "CSV ಫೈಲ್ ರೂಪದಲ್ಲಿ ಉಳಿಸಿ"
-  },
   "scanInstructions": {
     "message": "ನಿಮ್ಮ ಕ್ಯಾಮರಾದ ಮುಂದೆ QR ಕೋಡ್ ಇರಿಸಿ"
   },
@@ -1047,9 +1044,6 @@
   },
   "youSign": {
     "message": "ನೀವು ಸಹಿ ಮಾಡುತ್ತಿರುವಿರಿ"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "ನಿಮ್ಮ ಖಾಸಗಿ ಸೀಡ್ ಫ್ರೇಸ್"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "ವೇಗ ಹೆಚ್ಚಿಸುವುದಕ್ಕೆ ಶೂನ್ಯ ಗ್ಯಾಸ್ ಬೆಲೆ"

@@ -1118,9 +1118,6 @@
   "save": {
     "message": "Salva"
   },
-  "saveAsCsvFile": {
-    "message": "Salva Come File CSV"
-  },
   "scanInstructions": {
     "message": "Posizione il codice QR davanti alla fotocamera"
   },
@@ -1720,9 +1717,6 @@
   },
   "youSign": {
     "message": "Ti stai connettendo"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "La tua frase seed privata"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Prezzo del gas maggiore di zero"

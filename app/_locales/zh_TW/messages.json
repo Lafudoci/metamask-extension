@@ -726,9 +726,6 @@
   "save": {
     "message": "儲存"
   },
-  "saveAsCsvFile": {
-    "message": "儲存為CSV格式檔案"
-  },
   "scanInstructions": {
     "message": "請將 QR code 放在攝影鏡頭前面"
   },
@@ -1026,9 +1023,6 @@
   },
   "youSign": {
     "message": "正在簽署"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "您的助憶詞"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "加速的 Gas 價格為 0"

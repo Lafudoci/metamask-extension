@@ -725,9 +725,6 @@
   "save": {
     "message": "Gem"
   },
-  "saveAsCsvFile": {
-    "message": "Gem som CSV-fil"
-  },
   "scanInstructions": {
     "message": "Placer QR-koden foran dit kamera"
   },
@@ -1016,9 +1013,6 @@
   },
   "youSign": {
     "message": "Du skriver under"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Din private seed-sætning"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Nul brændstofpris på fremskynding"

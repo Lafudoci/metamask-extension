@@ -745,9 +745,6 @@
   "save": {
     "message": "حفظ"
   },
-  "saveAsCsvFile": {
-    "message": "حفظ كملف CSV"
-  },
   "scanInstructions": {
     "message": "ضع رمز الاستجابة السريعة أمام الكاميرا"
   },
@@ -1048,9 +1045,6 @@
   },
   "youSign": {
     "message": "أنت بصدد التوقيع"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "عبارة الأمان الشخصية الخاصة بك"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "سعر الغاز صفر عند التعجيل"

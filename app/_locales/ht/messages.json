@@ -479,9 +479,6 @@
   "save": {
     "message": "Sove"
   },
-  "saveAsCsvFile": {
-    "message": "Sove kòm dosye CSV"
-  },
   "scanInstructions": {
     "message": "Mete kòd QR la devan kamera ou"
   },
@@ -668,8 +665,5 @@
   },
   "youSign": {
     "message": "Ou ap siyen kounya"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Seed fraz prive ou a"
   }
 }

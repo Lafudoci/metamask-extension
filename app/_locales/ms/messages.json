@@ -724,9 +724,6 @@
   "save": {
     "message": "Simpan"
   },
-  "saveAsCsvFile": {
-    "message": "Simpan sebagai Fail CSV"
-  },
   "scanInstructions": {
     "message": "Bawa kod QR ke hadapan kamera anda"
   },
@@ -1024,9 +1021,6 @@
   },
   "youSign": {
     "message": "Anda menandatangani"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Ungkapan benih peribadi anda"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Sifar harga gas untuk pencepatan"

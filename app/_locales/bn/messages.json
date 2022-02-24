@@ -744,9 +744,6 @@
   "save": {
     "message": "সেভ করুন"
   },
-  "saveAsCsvFile": {
-    "message": "CSV ফাইল হিসাবে সংরক্ষণ করুন"
-  },
   "scanInstructions": {
     "message": "QR কোডটি আপনার ক্যামেরার সামনে ধরুন"
   },
@@ -1047,9 +1044,6 @@
   },
   "youSign": {
     "message": "আপনি স্বাক্ষর করছেন"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "আপনার ব্যক্তিগত সীড ফ্রেজ"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "স্পীড আপ এ শূণ্য গ্যাসের মূল্য"

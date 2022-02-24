@@ -2193,9 +2193,6 @@
   "save": {
     "message": "Salvar"
   },
-  "saveAsCsvFile": {
-    "message": "Salvar como arquivo CSV"
-  },
   "scanInstructions": {
     "message": "Posicione o QR code na frente da sua câmera"
   },
@@ -3271,9 +3268,6 @@
   },
   "youSign": {
     "message": "Você está assinando"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Sua Frase de Recuperação Secreta privada"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "O preço do gás está zerado na aceleração"

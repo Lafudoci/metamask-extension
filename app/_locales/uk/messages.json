@@ -744,9 +744,6 @@
   "save": {
     "message": "Зберегти"
   },
-  "saveAsCsvFile": {
-    "message": "Зберегти як файл CSV"
-  },
   "scanInstructions": {
     "message": "Розташуйте QR-код перед вашою камерою"
   },
@@ -1047,9 +1044,6 @@
   },
   "youSign": {
     "message": "Ви підписуєте"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Ваша секретна seed-фраза"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Ціна пального на прискорення - нуль"

@@ -722,9 +722,6 @@
   "save": {
     "message": "Desa"
   },
-  "saveAsCsvFile": {
-    "message": "Guarda com a Arxiu CSV"
-  },
   "scanInstructions": {
     "message": "Col·loca el codi QR davant la teva càmera"
   },
@@ -1016,9 +1013,6 @@
   },
   "youSign": {
     "message": "Estàs signant"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "La teva frase privada de seeds"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Gas a cost zero accelerant-se"

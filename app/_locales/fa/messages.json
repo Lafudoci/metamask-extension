@@ -744,9 +744,6 @@
   "save": {
     "message": "ذخیره"
   },
-  "saveAsCsvFile": {
-    "message": "ذخیره منحیث فایل CSV"
-  },
   "scanInstructions": {
     "message": "رمز QR را در مقابل کمره تان قرار دهید"
   },
@@ -1047,9 +1044,6 @@
   },
   "youSign": {
     "message": "شما در حال ورود هستید"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "عبارت بازیاب شخصی شما"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "قیمت صفر گاز بسوی سرعت"

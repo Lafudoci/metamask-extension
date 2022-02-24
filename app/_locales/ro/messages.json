@@ -731,9 +731,6 @@
   "save": {
     "message": "Salvează"
   },
-  "saveAsCsvFile": {
-    "message": "Salvați ca fișier CSV "
-  },
   "scanInstructions": {
     "message": "Așezați codul QR în fața camerei"
   },
@@ -1028,9 +1025,6 @@
   },
   "youSign": {
     "message": "Semnați"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Expresia dvs. seed privată"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Preț gas zero la accelerare"

@@ -734,9 +734,6 @@
   "save": {
     "message": "Salvesta"
   },
-  "saveAsCsvFile": {
-    "message": "Salvesta CSV-failina"
-  },
   "scanInstructions": {
     "message": "Asetage QR-kood kaamera ette"
   },
@@ -1037,9 +1034,6 @@
   },
   "youSign": {
     "message": "Allkirjastate"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Teie privaatne seemnefraas"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Null gaasihind kiirendamisel"

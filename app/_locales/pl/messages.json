@@ -738,9 +738,6 @@
   "save": {
     "message": "Zapisz"
   },
-  "saveAsCsvFile": {
-    "message": "Zapisz jako plik CSV"
-  },
   "scanInstructions": {
     "message": "Umieść kod QR na wprost kamery"
   },
@@ -1035,9 +1032,6 @@
   },
   "youSign": {
     "message": "Podpisujesz"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Twoja prywatna fraza seed"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Przyspieszenie z zerową ceną gazu"

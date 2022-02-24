@@ -744,9 +744,6 @@
   "save": {
     "message": "Išsaugoti"
   },
-  "saveAsCsvFile": {
-    "message": "Įrašyti kaip CSV failą"
-  },
   "scanInstructions": {
     "message": "Laikykite QR kodą priešais kamerą"
   },
@@ -1047,9 +1044,6 @@
   },
   "youSign": {
     "message": "Pasirašote"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Jūsų asmeninė atkūrimo frazė"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Nustatykite nulinę dujų kainą greitėjant"

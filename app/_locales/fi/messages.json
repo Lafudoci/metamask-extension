@@ -741,9 +741,6 @@
   "save": {
     "message": "Tallenna"
   },
-  "saveAsCsvFile": {
-    "message": "Tallenna CSV-tiedostona"
-  },
   "scanInstructions": {
     "message": "Aseta QR-koodi kamerasi eteen"
   },
@@ -1044,9 +1041,6 @@
   },
   "youSign": {
     "message": "Olet allekirjoittamassa"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Sinun yksityinen siemenlauseesi"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Polttoaine ei maksa kiihdytyksen yhteydessä"

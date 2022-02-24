@@ -2209,9 +2209,6 @@
   "save": {
     "message": "Guardar"
   },
-  "saveAsCsvFile": {
-    "message": "Guardar como archivo CSV"
-  },
   "scanInstructions": {
     "message": "Ponga el código QR frente a la cámara"
   },
@@ -3287,9 +3284,6 @@
   },
   "youSign": {
     "message": "Está firmando"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Su frase secreta de recuperación privada"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "No hay entradas sobre el precio del gas al acelerar la transacción"

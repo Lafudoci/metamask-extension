@@ -731,9 +731,6 @@
   "save": {
     "message": "Lagre"
   },
-  "saveAsCsvFile": {
-    "message": "Lagre som CSV-fil "
-  },
   "scanInstructions": {
     "message": "Plasser QR-koden foran kameraet ditt"
   },
@@ -1025,9 +1022,6 @@
   },
   "youSign": {
     "message": "Du signerer"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Din private frøfrase"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Null bensinpris for fremskynding"

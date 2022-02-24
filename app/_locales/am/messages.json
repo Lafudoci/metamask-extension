@@ -729,9 +729,6 @@
   "save": {
     "message": "አስቀምጥ"
   },
-  "saveAsCsvFile": {
-    "message": "እንደ CSV ፋይል አስቀምጥ"
-  },
   "scanInstructions": {
     "message": "የ QR ኮዱን ከካሜራዎ ፊት ለፊት ያስቀምጡ"
   },
@@ -1032,9 +1029,6 @@
   },
   "youSign": {
     "message": "እየፈረሙ ነው"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "የግል ዘር ሐረግዎ"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "በስፒድ አፕ ላይ ዜሮ የነዳጅ ዋጋ"

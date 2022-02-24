@@ -728,9 +728,6 @@
   "save": {
     "message": "Spara"
   },
-  "saveAsCsvFile": {
-    "message": "Spara som CSV-fil"
-  },
   "scanInstructions": {
     "message": "Placera QR-koden framför din kamera"
   },
@@ -1022,9 +1019,6 @@
   },
   "youSign": {
     "message": "Du signerar"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Din privata seedphrase"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Inget gaspris vid uppsnabbning"

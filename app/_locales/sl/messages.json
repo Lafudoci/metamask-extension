@@ -732,9 +732,6 @@
   "save": {
     "message": "Shrani"
   },
-  "saveAsCsvFile": {
-    "message": "Shrani kot CSV datoteko"
-  },
   "scanInstructions": {
     "message": "Postavite QR kodo pred vašo kamero"
   },
@@ -1035,9 +1032,6 @@
   },
   "youSign": {
     "message": "Podpisali boste"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Vaš zasebni seed phrase"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Ničelni gas price na pospešitvi"

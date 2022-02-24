@@ -740,9 +740,6 @@
   "save": {
     "message": "Saglabāt"
   },
-  "saveAsCsvFile": {
-    "message": "Saglabāt kā CSV failu"
-  },
   "scanInstructions": {
     "message": "Novietojiet QR kodu kameras priekšā"
   },
@@ -1043,9 +1040,6 @@
   },
   "youSign": {
     "message": "Jūs parakstāt"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Jūsu privātā atkopšanas frāze"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Gas nulles cena pie paātrinājuma"

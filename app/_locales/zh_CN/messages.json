@@ -2903,9 +2903,6 @@
   "save": {
     "message": "保存"
   },
-  "saveAsCsvFile": {
-    "message": "保存为 CSV 文件"
-  },
   "scanInstructions": {
     "message": "将二维码放在摄像头前"
   },

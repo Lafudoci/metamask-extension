@@ -740,9 +740,6 @@
   "save": {
     "message": "Запазване"
   },
-  "saveAsCsvFile": {
-    "message": "Запазване като CSV файл"
-  },
   "scanInstructions": {
     "message": "Поставете QR кода пред камерата"
   },
@@ -1043,9 +1040,6 @@
   },
   "youSign": {
     "message": "Вие подписвате"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "Вашата лична фраза зародиш"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Нулева цена на газ при ускоряване"

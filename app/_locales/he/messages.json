@@ -741,9 +741,6 @@
   "save": {
     "message": "שמור"
   },
-  "saveAsCsvFile": {
-    "message": "שמירה כקובץ CSV"
-  },
   "scanInstructions": {
     "message": "הצב/י את קוד ה-QR שלך מול המצלמה"
   },
@@ -1044,9 +1041,6 @@
   },
   "youSign": {
     "message": "הנך חותמ/ת"
-  },
-  "yourPrivateSeedPhrase": {
-    "message": "ה-seed phrase הפרטי שלך"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "מחיר גז אפס על האצה"
