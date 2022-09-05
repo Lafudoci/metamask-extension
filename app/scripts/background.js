@@ -46,6 +46,7 @@ import getFirstPreferredLangCode from './lib/get-first-preferred-lang-code';
 import getObjStructure from './lib/getObjStructure';
 import setupEnsIpfsResolver from './lib/ens-ipfs/setup';
 import { getPlatform } from './lib/util';
+import { getURL } from 'ui/helpers/utils/util';
 /* eslint-enable import/first */
 
 const { sentry } = global;
@@ -82,7 +83,7 @@ if (inTest || process.env.METAMASK_DEBUG) {
   global.metamaskGetState = localStore.get.bind(localStore);
 }
 
-const phishingPageUrl = new URL(process.env.PHISHING_WARNING_PAGE_URL);
+const phishingPageUrl = getURL(process.env.PHISHING_WARNING_PAGE_URL);
 
 const ONE_SECOND_IN_MILLISECONDS = 1_000;
 // Timeout for initializing phishing warning page.
@@ -196,7 +197,7 @@ class PhishingWarningPageTimeoutError extends Error {
 async function loadPhishingWarningPage() {
   let iframe;
   try {
-    const extensionStartupPhishingPageUrl = new URL(
+    const extensionStartupPhishingPageUrl = getURL(
       process.env.PHISHING_WARNING_PAGE_URL,
     );
     // The `extensionStartup` hash signals to the phishing warning page that it should not bother
@@ -428,7 +429,7 @@ function setupController(initState, initLangCode, remoteSourcePort) {
     }
 
     const senderUrl = remotePort.sender?.url
-      ? new URL(remotePort.sender.url)
+      ? getURL(remotePort.sender.url)
       : null;
 
     if (isMetaMaskInternalProcess) {
@@ -502,7 +503,7 @@ function setupController(initState, initLangCode, remoteSourcePort) {
     } else {
       if (remotePort.sender && remotePort.sender.tab && remotePort.sender.url) {
         const tabId = remotePort.sender.tab.id;
-        const url = new URL(remotePort.sender.url);
+        const url = getURL(remotePort.sender.url);
         const { origin } = url;
 
         remotePort.onMessage.addListener((msg) => {

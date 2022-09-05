@@ -7,6 +7,7 @@ import { obj as createThoughStream } from 'through2';
 
 import { isManifestV3 } from '../../shared/modules/mv3.utils';
 import shouldInjectProvider from '../../shared/modules/provider-injection';
+import { getURL } from 'ui/helpers/utils/util';
 
 // These require calls need to use require to be statically recognized by browserify
 const fs = require('fs');
@@ -47,7 +48,7 @@ let legacyExtMux,
 const WORKER_KEEP_ALIVE_INTERVAL = 1000;
 const WORKER_KEEP_ALIVE_MESSAGE = 'WORKER_KEEP_ALIVE_MESSAGE';
 
-const phishingPageUrl = new URL(process.env.PHISHING_WARNING_PAGE_URL);
+const phishingPageUrl = getURL(process.env.PHISHING_WARNING_PAGE_URL);
 
 let phishingExtChannel,
   phishingExtMux,
