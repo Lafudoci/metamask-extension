@@ -13,6 +13,7 @@ import {
   getNextNonce,
   tryReverseResolveAddress,
   setDefaultHomeActiveTabName,
+  addToAddressBook,
 } from '../../store/actions';
 import { isBalanceSufficient } from '../send/send.utils';
 import { shortenAddress, valuesFor } from '../../helpers/utils/util';
@@ -47,7 +48,9 @@ import {
   updateGasFees,
   getIsGasEstimatesLoading,
   getNativeCurrency,
+  getSendToAccounts,
 } from '../../ducks/metamask/metamask';
+import { addHexPrefix } from '../../../app/scripts/lib/util';
 
 import {
   parseStandardTokenTransactionData,
@@ -76,6 +79,14 @@ const customNonceMerge = (txData) =>
         customNonceValue,
       }
     : txData;
+
+function addressIsNew(toAccounts, newAddress) {
+  const newAddressNormalized = newAddress.toLowerCase();
+  const foundMatching = toAccounts.some(
+    ({ address }) => address.toLowerCase() === newAddressNormalized,
+  );
+  return !foundMatching;
+}
 
 const mapStateToProps = (state, ownProps) => {
   const {
@@ -124,6 +135,8 @@ const mapStateToProps = (state, ownProps) => {
   if (type !== TRANSACTION_TYPES.SIMPLE_SEND) {
     toAddress = propsToAddress || tokenToAddress || txParamsToAddress;
   }
+
+  const toAccounts = getSendToAccounts(state);
 
   const tokenList = getTokenList(state);
 
@@ -204,6 +217,7 @@ const mapStateToProps = (state, ownProps) => {
     balance,
     fromAddress,
     fromName,
+    toAccounts,
     toAddress,
     toEns,
     toName,
@@ -288,6 +302,13 @@ export const mapDispatchToProps = (dispatch) => {
       dispatch(setDefaultHomeActiveTabName(tabName)),
     updateTransactionGasFees: (gasFees) => {
       dispatch(updateGasFees({ ...gasFees, expectHexWei: true }));
+    },
+    showBuyModal: () => dispatch(showModal({ name: 'DEPOSIT_ETHER' })),
+    addToAddressBookIfNew: (newAddress, toAccounts, nickname = '') => {
+      const hexPrefixedAddress = addHexPrefix(newAddress);
+      if (addressIsNew(toAccounts, hexPrefixedAddress)) {
+        dispatch(addToAddressBook(hexPrefixedAddress, nickname));
+      }
     },
   };
 };
