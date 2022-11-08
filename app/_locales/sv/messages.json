@@ -713,15 +713,6 @@
   "revealSeedWords": {
     "message": "Visa seed-ord"
   },
-  "revealSeedWordsDescription": {
-    "message": "Om du någonsin byter webbläsare eller dator kommer du behöva denna"
-  },
-  "revealSeedWordsWarning": {
-    "message": "De här orden kan användas för att stjäla alla dina konton."
-  },
-  "revealSeedWordsWarningTitle": {
-    "message": "DELA INTE frasen med någon!"
-  },
   "rpcUrl": {
     "message": "Ny RPC-URL"
   },

@@ -2894,9 +2894,6 @@
   "save": {
     "message": "Simpan"
   },
-  "saveAsCsvFile": {
-    "message": "Simpan sebagai file CSV"
-  },
   "scanInstructions": {
     "message": "Tempatkan kode QR di bagian depan kamera Anda"
   },
