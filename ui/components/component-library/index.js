@@ -9,9 +9,13 @@ export { ButtonLink } from './button-link';
 export { ButtonPrimary } from './button-primary';
 export { ButtonSecondary } from './button-secondary';
 export { HelpText } from './help-text';
-export { Icon } from './icon';
+export { Icon, ICON_NAMES } from './icon';
 export { Label } from './label';
 export { Tag } from './tag';
 export { Text } from './text';
 export { TextField } from './text-field';
-export { TextFieldBase } from './text-field-base';
+export {
+  TextFieldBase,
+  TEXT_FIELD_BASE_SIZES,
+  TEXT_FIELD_BASE_TYPES,
+} from './text-field-base';
