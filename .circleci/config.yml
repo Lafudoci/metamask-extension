@@ -884,7 +884,7 @@ jobs:
 
   test-unit-jest:
     executor: node-browsers-medium-plus
-    parallelism: 8
+    parallelism: 12
     steps:
       - checkout
       - attach_workspace:
