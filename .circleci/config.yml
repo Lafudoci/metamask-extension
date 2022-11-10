@@ -93,9 +93,18 @@ workflows:
       - test-e2e-chrome-mv3:
           requires:
             - prep-build-test-mv3
-      - test-unit:
+      - test-unit-mocha:
           requires:
             - prep-deps
+      - test-unit-jest:
+          requires:
+            - prep-deps
+      - test-unit-jest-validate-coverage:
+          requires:
+            - test-unit-jest
+      - jest-it-up:
+          requires:
+            - test-unit-jest-validate-coverage
       - test-unit-global:
           requires:
             - prep-deps
@@ -127,8 +136,10 @@ workflows:
             - test-lint-shellcheck
             - test-lint-lockfile
             - test-lint-changelog
-            - test-unit
+            - test-unit-jest
             - test-unit-global
+            - test-unit-mocha
+            - jest-it-up
             - validate-source-maps
             - validate-source-maps-beta
             - validate-source-maps-flask
@@ -855,9 +866,8 @@ jobs:
             git config user.email metamaskbot@users.noreply.github.com
             yarn ts-migration:dashboard:deploy
 
-  test-unit:
+  test-unit-mocha:
     executor: node-browsers
-    parallelism: 8
     steps:
       - checkout
       - attach_workspace:
@@ -865,11 +875,51 @@ jobs:
       - run:
           name: test:coverage:mocha
           command: yarn test:coverage:mocha
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .nyc_output
+            - coverage
+
+  test-unit-jest:
+    executor: node-browsers
+    parallelism: 8
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
       - run:
           name: test:coverage:jest:ci
-          command: |
-            TEST=$(circleci tests glob "src/__tests__/*.js" | circleci tests split)
-            yarn test:coverage:jest $TEST
+          command: yarn test:coverage:jest:ci
+      - persist_to_workspace:
+          root: .
+          paths:
+            - coverage
+            - jest-coverage
+      - store_test_results:
+          path: test/test-results/junit.xml
+
+  test-unit-jest-validate-coverage:
+    executor: node-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: test:coverage:validate
+          command: yarn test:validate
+      - persist_to_workspace:
+          root: .
+          paths:
+            - coverage
+            - jest-coverage
+
+  jest-it-up:
+    executor: node-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
       - run:
           name: jest-it-up
           command: yarn jest-it-up -m 5
@@ -880,14 +930,6 @@ jobs:
               echo "Detected changes in coverage thresholds"
               exit 1
             fi
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .nyc_output
-            - coverage
-            - jest-coverage
-      - store_test_results:
-          path: test/test-results/junit.xml
   test-unit-global:
     executor: node-browsers
     steps:
