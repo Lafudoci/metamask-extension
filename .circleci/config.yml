@@ -140,6 +140,7 @@ workflows:
             - test-unit-global
             - test-unit-mocha
             - jest-it-up
+            - test-unit-jest-validate-coverage
             - validate-source-maps
             - validate-source-maps-beta
             - validate-source-maps-flask
@@ -882,7 +883,7 @@ jobs:
             - coverage
 
   test-unit-jest:
-    executor: node-browsers
+    executor: node-browsers-medium-plus
     parallelism: 8
     steps:
       - checkout

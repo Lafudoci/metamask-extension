@@ -26,6 +26,7 @@ function mergeCoverageMaps(files, alwaysMerge) {
 }
 
 function generateSummaryReport(dir, coverageMap) {
+  console.log(dir);
   const context = libReport.createContext({
     dir,
     coverageMap,
@@ -44,13 +45,12 @@ function mergeCoverageAndGenerateSummaryReport() {
     )
     .map((file) => path.join('./jest-coverage/main', file));
   const coverageMap = mergeCoverageMaps(filePaths, true);
-  const dir = path.dirname('./jest-coverage/main');
-  generateSummaryReport(dir, coverageMap);
+  generateSummaryReport('./jest-coverage/main', coverageMap);
 }
 
 async function start() {
   mergeCoverageAndGenerateSummaryReport();
-  const coverage = loadData('./jest-coverage/coverage-summary.json');
+  const coverage = loadData('./jest-coverage/main/coverage-summary.json');
   const { lines, branches, functions, statements } = coverage.total;
   const globalThreshold = jestConfig.coverageThreshold.global;
   const lineCoverageNotMet = lines.pct < globalThreshold.lines;
