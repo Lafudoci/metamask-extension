@@ -15,12 +15,12 @@ const TransactionAlerts = ({
   userAcknowledgedGasMissing,
   setUserAcknowledgedGasMissing,
 }) => {
-  const { estimateUsed, hasSimulationError, supportsEIP1559V2, isNetworkBusy } =
+  const { estimateUsed, hasSimulationError, supportsEIP1559, isNetworkBusy } =
     useGasFeeContext();
   const pendingTransactions = useSelector(submittedPendingTransactionsSelector);
   const t = useI18nContext();
 
-  if (!supportsEIP1559V2) {
+  if (!supportsEIP1559) {
     return null;
   }
 
