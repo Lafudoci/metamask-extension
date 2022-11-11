@@ -96,12 +96,16 @@ workflows:
       - test-unit-mocha:
           requires:
             - prep-deps
-      - test-unit-jest:
+      - test-unit-jest-main:
+          requires:
+            - prep-deps
+      - test-unit-jest-development:
           requires:
             - prep-deps
       - test-unit-jest-validate-coverage:
           requires:
-            - test-unit-jest
+            - test-unit-jest-main
+            - test-unit-jest-development
       - jest-it-up:
           requires:
             - test-unit-jest-validate-coverage
@@ -136,7 +140,8 @@ workflows:
             - test-lint-shellcheck
             - test-lint-lockfile
             - test-lint-changelog
-            - test-unit-jest
+            - test-unit-jest-main
+            - test-unit-jest-development
             - test-unit-global
             - test-unit-mocha
             - jest-it-up
@@ -882,7 +887,24 @@ jobs:
             - .nyc_output
             - coverage
 
-  test-unit-jest:
+  test-unit-jest-development:
+    executor: node-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: jest development unit tests
+          command: yarn jest --config=./development/jest.config.js --maxWorkers 2 --coverage
+      - persist_to_workspace:
+          root: .
+          paths:
+            - coverage
+            - jest-coverage
+      - store_test_results:
+          path: test/test-results/junit.xml
+
+  test-unit-jest-main:
     executor: node-browsers-medium-plus
     parallelism: 12
     steps:
