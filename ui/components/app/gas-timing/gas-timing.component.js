@@ -15,6 +15,7 @@ import {
   getIsGasEstimatesLoading,
 } from '../../../ducks/metamask/metamask';
 
+import { useGasFeeContext } from '../../ui/contexts/gasFee';
 import Typography from '../../ui/typography/typography';
 import {
   TYPOGRAPHY,
