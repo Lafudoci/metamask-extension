@@ -21,7 +21,7 @@ async function start() {
     '--coverage',
     '--maxWorkers=2',
     '--coverageThreshold={}',
-    `--shard=${circleNodeIndex}/${circleNodeTotal}`,
+    `--shard=${circleNodeIndex + 1}/${circleNodeTotal}`,
   ]);
   // Once done we rename the file so that its indexed by the job number.
   await runCommand('mv', [
