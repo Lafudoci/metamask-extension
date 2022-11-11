@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "不明な処理時間"
   },
-  "editGasTooLowTooltip": {
-    "message": "現在の市場の状況に対し、最大手数料または最大優先手数料が低い可能性があります。トランザクションがいつ処理されるか (または処理されるかどうか) わかりません。 "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "これにより最大手数料は下がりますが、ネットワークトラフィックが増加するとトランザクションが遅延または失敗する可能性があります。"
-  },
   "editNonceField": {
     "message": "ナンスを編集"
   },

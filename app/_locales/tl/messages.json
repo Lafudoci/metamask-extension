@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "Hindi kilalang oras ng pagproseso"
   },
-  "editGasTooLowTooltip": {
-    "message": "Ang iyong max fee o max priority fee ay maaaring mababa para sa kasalukuyang kondisyon ng market. Hindi namin alam kung kailan (o kung) ipoproseso ang iyong transaksyon. "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "Pinapababa nito ang iyong maximum fee ngunit kung network traffic ay maaaring maantala o mabigo ang iyong transaksyon."
-  },
   "editNonceField": {
     "message": "I-edit sa Nonce"
   },

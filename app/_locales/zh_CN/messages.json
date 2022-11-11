@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "处理时间未知"
   },
-  "editGasTooLowTooltip": {
-    "message": "对于当前的市场条件而言，您的最大费用或最大优先费用可能较低。我们不知道您的交易将在何时（或会否）处理。"
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "这降低了您的最大费用，但如果网络流量增加，您的交易可能会被延迟或失败。"
-  },
   "editNonceField": {
     "message": "编辑 Nonce"
   },

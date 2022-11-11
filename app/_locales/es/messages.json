@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "Se desconoce el tiempo de procesamiento"
   },
-  "editGasTooLowTooltip": {
-    "message": "Su tarifa máxima o su tarifa prioritaria máxima pueden ser bajas para las condiciones actuales del mercado. No sabemos cuándo (o si) se procesará su transacción. "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "Esto reduce su tarifa máxima, pero si el tráfico de la red aumenta, su transacción puede retrasarse o resultar fallida."
-  },
   "editNonceField": {
     "message": "Editar nonce"
   },

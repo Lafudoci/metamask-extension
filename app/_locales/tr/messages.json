@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "Bilinmeyen işlem süresi"
   },
-  "editGasTooLowTooltip": {
-    "message": "Maks. ücretiniz veya maks. öncelik ücretiniz mevcut piyasa koşulları için düşük olabilir. İşleminizin ne zaman gerçekleştirileceğini (ya da gerçekleştirilip gerçekleştirilmeyeceğini) bilmeyiz. "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "Bu, maksimum ücretinizi düşürür ancak ağ trafiğiniz artarsa işleminiz gecikebilir ya da gerçekleşmeyebilir."
-  },
   "editNonceField": {
     "message": "Geçici anahtarı düzenle"
   },

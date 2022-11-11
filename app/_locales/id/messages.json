@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "Waktu pemrosesan tak diketahui"
   },
-  "editGasTooLowTooltip": {
-    "message": "Biaya maks atau biaya prioritas maks Anda mungkin rendah untuk kondisi pasar saat ini. Kami tidak tahu kapan (atau jika) transaksi Anda akan diproses. "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "Ini akan menurunkan biaya maks Anda, tetapi jika lalu lintas jaringan meningkat, transaksi Anda mungkin tertunda atau gagal."
-  },
   "editNonceField": {
     "message": "Edit nonce"
   },

@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "Délai de traitement inconnu"
   },
-  "editGasTooLowTooltip": {
-    "message": "Vos frais maximaux ou vos frais de priorité maximaux risquent d’être faibles compte tenu des conditions actuelles du marché. Nous ignorons quand (ou si) votre transaction sera traitée. "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "Cela réduit vos frais maximaux, mais si le trafic réseau augmente, votre transaction peut être retardée ou ne pas aboutir."
-  },
   "editNonceField": {
     "message": "Modifier le nonce"
   },

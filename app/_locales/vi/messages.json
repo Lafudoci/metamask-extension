@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "Thời gian xử lý không rõ"
   },
-  "editGasTooLowTooltip": {
-    "message": "Phí tối đa hoặc phí ưu tiên tối đa của bạn có thể thấp so với tình trạng mạng hiện tại. Chúng tôi không biết khi nào (hoặc liệu) giao dịch của bạn được xử lý. "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "Việc này sẽ giảm mức phí tối đa, nhưng nếu lưu lượng mạng tăng lên, giao dịch của bạn có thể bị trì hoãn hoặc thất bại."
-  },
   "editNonceField": {
     "message": "Chỉnh sửa số chỉ dùng một lần"
   },

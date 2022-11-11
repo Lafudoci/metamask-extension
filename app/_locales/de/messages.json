@@ -1112,12 +1112,6 @@
   "editGasTooLow": {
     "message": "Unbekannte Bearbeitungszeit"
   },
-  "editGasTooLowTooltip": {
-    "message": "Ihre Maximalgebühr oder die maximale Prioritätsgebühr kann für die aktuellen Marktbedingungen niedrig sein. Wir wissen nicht, wann (oder ob Ihre Transaktion verarbeitet wird). "
-  },
-  "editGasTooLowWarningTooltip": {
-    "message": "Dies senkt Ihre maximale Gebühr, aber wenn der Netzwerktraffic steigt, kann Ihre Transaktion sich verzögern oder scheitern."
-  },
   "editNonceField": {
     "message": "Nonce bearbeiten"
   },
