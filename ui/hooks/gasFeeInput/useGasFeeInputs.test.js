@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { TRANSACTION_ENVELOPE_TYPES } from '../../../shared/constants/transaction';
 import {
   GAS_RECOMMENDATIONS,
-  CUSTOM_GAS_ESTIMATE,
   EDIT_GAS_MODES,
 } from '../../../shared/constants/gas';
 
