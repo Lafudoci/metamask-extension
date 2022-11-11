@@ -2,17 +2,11 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { GAS_ESTIMATE_TYPES } from '../../../shared/constants/gas';
-import { SECONDARY } from '../../helpers/constants/common';
 import { getMaximumGasTotalInHexWei } from '../../../shared/modules/gas.utils';
 import { decGWEIToHexWEI } from '../../helpers/utils/conversions.util';
-import {
-  checkNetworkAndAccountSupports1559,
-  getShouldShowFiat,
-} from '../../selectors';
+import { checkNetworkAndAccountSupports1559 } from '../../selectors';
 import { isLegacyTransaction } from '../../helpers/utils/transactions.util';
 
-import { useCurrencyDisplay } from '../useCurrencyDisplay';
-import { useUserPreferencedCurrency } from '../useUserPreferencedCurrency';
 import {
   decimalToHex,
   hexWEIToDecGWEI,
@@ -57,11 +51,6 @@ export function useMaxFeePerGasInput({
     useSelector(checkNetworkAndAccountSupports1559) &&
     !isLegacyTransaction(transaction?.txParams);
 
-  const { currency: fiatCurrency, numberOfDecimals: fiatNumberOfDecimals } =
-    useUserPreferencedCurrency(SECONDARY);
-
-  const showFiat = useSelector(getShouldShowFiat);
-
   const initialMaxFeePerGas = supportsEIP1559
     ? getMaxFeePerGasFromTransaction(transaction, gasFeeEstimates)
     : 0;
@@ -101,8 +90,6 @@ export function useMaxFeePerGasInput({
       gasPrice: decGWEIToHexWEI(gasPrice),
     };
   }
-
-  const maximumCostInHexWei = getMaximumGasTotalInHexWei(gasSettings);
 
   // We specify whether to use the estimate value by checking if the state
   // value has been set. The state value is only set by user input and is wiped

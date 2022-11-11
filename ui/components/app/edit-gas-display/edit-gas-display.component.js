@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect, useRef, useState } from 'react';
+import React, { useContext, useLayoutEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -42,6 +42,7 @@ export default function EditGasDisplay({
   minimumGasLimit,
   balanceError,
   estimatesUnavailableWarning,
+  gasErrors,
   hasGasErrors,
   txParamsHaveBeenCustomized,
   isNetworkBusy,
@@ -164,6 +165,7 @@ export default function EditGasDisplay({
               setGasPrice={setGasPrice}
               onManualChange={onManualChange}
               minimumGasLimit={minimumGasLimit}
+              gasErrors={gasErrors}
             />
           )}
       </div>
@@ -190,4 +192,5 @@ EditGasDisplay.propTypes = {
   hasGasErrors: PropTypes.bool,
   txParamsHaveBeenCustomized: PropTypes.bool,
   isNetworkBusy: PropTypes.bool,
+  isGasEstimatesLoading: PropTypes.bool,
 };

@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 import { I18nContext } from '../../../contexts/i18n';
 import FormField from '../../ui/form-field';
-import { GAS_ESTIMATE_TYPES } from '../../../../shared/constants/gas';
 import { getGasFormErrorText } from '../../../helpers/constants/gas';
 import { getNetworkSupportsSettingGasFees } from '../../../selectors';
 
@@ -73,4 +72,5 @@ AdvancedGasControls.propTypes = {
   gasPrice: PropTypes.string,
   setGasPrice: PropTypes.func,
   minimumGasLimit: PropTypes.string,
+  gasErrors: PropTypes.object,
 };

@@ -189,6 +189,7 @@ export function useGasFeeInputs(
     gasEstimateType,
     gasFeeEstimates,
     gasLimit,
+    gasPrice,
     transaction,
   });
 
@@ -197,7 +198,6 @@ export function useGasFeeInputs(
       estimateToUse,
       gasEstimateType,
       gasFeeEstimates,
-      supportsEIP1559V2,
       transaction,
     });
 

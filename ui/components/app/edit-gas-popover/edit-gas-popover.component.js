@@ -77,6 +77,7 @@ export default function EditGasPopover({
     properGasLimit,
     estimateToUse,
     hasGasErrors,
+    gasErrors,
     onManualChange,
     balanceError,
     estimatesUnavailableWarning,
@@ -241,6 +242,8 @@ export default function EditGasPopover({
               hasGasErrors={hasGasErrors}
               txParamsHaveBeenCustomized={txParamsHaveBeenCustomized}
               isNetworkBusy={isNetworkBusy}
+              gasErrors={gasErrors}
+              isGasEstimatesLoading={isGasEstimatesLoading}
               {...editGasDisplayProps}
             />
           </>

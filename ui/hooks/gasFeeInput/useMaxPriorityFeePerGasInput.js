@@ -35,7 +35,6 @@ const getMaxPriorityFeePerGasFromTransaction = (
  * @param options.estimateToUse
  * @param options.gasEstimateType
  * @param options.gasFeeEstimates
- * @param options.gasLimit
  * @param options.transaction
  * @returns {MaxPriorityFeePerGasInputReturnType}
  */
