@@ -877,10 +877,8 @@ export default class TransactionController extends EventEmitter {
     }
 
     if (eip1559Compatibility) {
-      const { eip1559V2Enabled } = this.preferencesStore.getState();
       const advancedGasFeeDefaultValues = this.getAdvancedGasFee();
       if (
-        eip1559V2Enabled &&
         Boolean(advancedGasFeeDefaultValues) &&
         !SWAP_TRANSACTION_TYPES.includes(txMeta.type)
       ) {
@@ -900,7 +898,7 @@ export default class TransactionController extends EventEmitter {
         //  then we set maxFeePerGas and maxPriorityFeePerGas to the suggested gasPrice.
         txMeta.txParams.maxFeePerGas = txMeta.txParams.gasPrice;
         txMeta.txParams.maxPriorityFeePerGas = txMeta.txParams.gasPrice;
-        if (eip1559V2Enabled && txMeta.origin !== ORIGIN_METAMASK) {
+        if (txMeta.origin !== ORIGIN_METAMASK) {
           txMeta.userFeeLevel = PRIORITY_LEVELS.DAPP_SUGGESTED;
         } else {
           txMeta.userFeeLevel = CUSTOM_GAS_ESTIMATE;
@@ -914,10 +912,8 @@ export default class TransactionController extends EventEmitter {
           txMeta.origin === ORIGIN_METAMASK
         ) {
           txMeta.userFeeLevel = GAS_RECOMMENDATIONS.MEDIUM;
-        } else if (eip1559V2Enabled) {
-          txMeta.userFeeLevel = PRIORITY_LEVELS.DAPP_SUGGESTED;
         } else {
-          txMeta.userFeeLevel = CUSTOM_GAS_ESTIMATE;
+          txMeta.userFeeLevel = PRIORITY_LEVELS.DAPP_SUGGESTED;
         }
 
         if (defaultMaxFeePerGas && !txMeta.txParams.maxFeePerGas) {
@@ -2213,8 +2209,7 @@ export default class TransactionController extends EventEmitter {
 
     let eip1559Version = '0';
     if (txMeta.txParams.maxFeePerGas) {
-      const { eip1559V2Enabled } = this.preferencesStore.getState();
-      eip1559Version = eip1559V2Enabled ? '2' : '1';
+      eip1559Version = '2';
     }
 
     const contractInteractionTypes = [

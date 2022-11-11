@@ -1646,9 +1646,6 @@ export default class MetamaskController extends EventEmitter {
       setAdvancedGasFee: preferencesController.setAdvancedGasFee.bind(
         preferencesController,
       ),
-      setEIP1559V2Enabled: preferencesController.setEIP1559V2Enabled.bind(
-        preferencesController,
-      ),
       setTheme: preferencesController.setTheme.bind(preferencesController),
       setImprovedTokenAllowanceEnabled:
         preferencesController.setImprovedTokenAllowanceEnabled.bind(
