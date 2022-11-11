@@ -190,6 +190,7 @@ EditGasDisplay.propTypes = {
   balanceError: PropTypes.bool,
   estimatesUnavailableWarning: PropTypes.bool,
   hasGasErrors: PropTypes.bool,
+  gasErrors: propTypes.object,
   txParamsHaveBeenCustomized: PropTypes.bool,
   isNetworkBusy: PropTypes.bool,
   isGasEstimatesLoading: PropTypes.bool,

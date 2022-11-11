@@ -1,16 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import { GAS_ESTIMATE_TYPES } from '../../../shared/constants/gas';
-import { getMaximumGasTotalInHexWei } from '../../../shared/modules/gas.utils';
-import { decGWEIToHexWEI } from '../../helpers/utils/conversions.util';
 import { checkNetworkAndAccountSupports1559 } from '../../selectors';
 import { isLegacyTransaction } from '../../helpers/utils/transactions.util';
 
-import {
-  decimalToHex,
-  hexWEIToDecGWEI,
-} from '../../../shared/lib/transactions-controller-utils';
+import { hexWEIToDecGWEI } from '../../../shared/lib/transactions-controller-utils';
 import { feeParamsAreCustom, getGasFeeEstimate } from './utils';
 
 const getMaxFeePerGasFromTransaction = (transaction, gasFeeEstimates) => {
@@ -34,8 +28,6 @@ const getMaxFeePerGasFromTransaction = (transaction, gasFeeEstimates) => {
  * @param options.estimateToUse
  * @param options.gasEstimateType
  * @param options.gasFeeEstimates
- * @param options.gasLimit
- * @param options.gasPrice
  * @param options.transaction
  * @returns {MaxFeePerGasInputReturnType}
  */
@@ -43,8 +35,6 @@ export function useMaxFeePerGasInput({
   estimateToUse,
   gasEstimateType,
   gasFeeEstimates,
-  gasLimit,
-  gasPrice,
   transaction,
 }) {
   const supportsEIP1559 =
@@ -70,26 +60,6 @@ export function useMaxFeePerGasInput({
       setMaxFeePerGas(initialMaxFeePerGas);
     }
   }, [initialMaxFeePerGas, setMaxFeePerGas, supportsEIP1559]);
-
-  let gasSettings = {
-    gasLimit: decimalToHex(gasLimit),
-  };
-  if (supportsEIP1559) {
-    gasSettings = {
-      ...gasSettings,
-      maxFeePerGas: decGWEIToHexWEI(maxFeePerGas || gasPrice || '0'),
-    };
-  } else if (gasEstimateType === GAS_ESTIMATE_TYPES.NONE) {
-    gasSettings = {
-      ...gasSettings,
-      gasPrice: '0x0',
-    };
-  } else {
-    gasSettings = {
-      ...gasSettings,
-      gasPrice: decGWEIToHexWEI(gasPrice),
-    };
-  }
 
   // We specify whether to use the estimate value by checking if the state
   // value has been set. The state value is only set by user input and is wiped

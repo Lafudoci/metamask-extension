@@ -188,8 +188,6 @@ export function useGasFeeInputs(
     estimateToUse,
     gasEstimateType,
     gasFeeEstimates,
-    gasLimit,
-    gasPrice,
     transaction,
   });
 
