@@ -128,7 +128,6 @@ export function useGasFeeInputs(
     gasEstimateType,
     gasFeeEstimates,
     isGasEstimatesLoading,
-    estimatedGasFeeTimeBounds,
     isNetworkBusy,
   } = useGasFeeEstimates();
 
@@ -161,10 +160,6 @@ export function useGasFeeInputs(
 
   const properGasLimit = Number(hexToDecimal(transaction?.originalGasEstimate));
 
-  const [userEditedGasLimit, setUserEditedGasLimit] = useState(() =>
-    Boolean(transaction?.userEditedGasLimit),
-  );
-
   /**
    * In EIP-1559 V2 designs change to gas estimate is always updated to transaction
    * Thus callback setEstimateToUse can be deprecate in favour of this useEffect
@@ -194,55 +189,42 @@ export function useGasFeeInputs(
       transaction,
     });
 
-  const { maxFeePerGas, maxFeePerGasFiat, setMaxFeePerGas } =
-    useMaxFeePerGasInput({
-      estimateToUse,
-      gasEstimateType,
-      gasFeeEstimates,
-      gasLimit,
-      gasPrice,
-      supportsEIP1559V2,
-      transaction,
-    });
-
-  const {
-    maxPriorityFeePerGas,
-    maxPriorityFeePerGasFiat,
-    setMaxPriorityFeePerGas,
-  } = useMaxPriorityFeePerGasInput({
+  const { maxFeePerGas, setMaxFeePerGas } = useMaxFeePerGasInput({
     estimateToUse,
     gasEstimateType,
     gasFeeEstimates,
     gasLimit,
+    gasPrice,
     supportsEIP1559V2,
     transaction,
   });
 
-  const {
-    estimatedBaseFee,
-    estimatedMaximumFiat,
-    estimatedMinimumFiat,
-    estimatedMaximumNative,
-    estimatedMinimumNative,
-    maximumCostInHexWei,
-    minimumCostInHexWei,
-  } = useGasEstimates({
-    editGasMode,
-    gasEstimateType,
-    gasFeeEstimates,
-    gasLimit,
-    gasPrice,
-    maxFeePerGas,
-    maxPriorityFeePerGas,
-    minimumGasLimit,
-    transaction,
-  });
+  const { maxPriorityFeePerGas, setMaxPriorityFeePerGas } =
+    useMaxPriorityFeePerGasInput({
+      estimateToUse,
+      gasEstimateType,
+      gasFeeEstimates,
+      supportsEIP1559V2,
+      transaction,
+    });
+
+  const { estimatedBaseFee, maximumCostInHexWei, minimumCostInHexWei } =
+    useGasEstimates({
+      editGasMode,
+      gasEstimateType,
+      gasFeeEstimates,
+      gasLimit,
+      gasPrice,
+      maxFeePerGas,
+      maxPriorityFeePerGas,
+      minimumGasLimit,
+      transaction,
+    });
 
   const {
     balanceError,
     estimatesUnavailableWarning,
     gasErrors,
-    gasWarnings,
     hasGasErrors,
     hasSimulationError,
   } = useGasFeeErrors({
@@ -288,37 +270,12 @@ export function useGasFeeInputs(
     setRetryTxMeta,
   });
 
-  // When a user selects an estimate level, it will wipe out what they have
-  // previously put in the inputs. This returns the inputs to the estimated
-  // values at the level specified.
-  const setEstimateToUse = useCallback(
-    (estimateLevel) => {
-      setInternalEstimateToUse(estimateLevel);
-      handleGasLimitOutOfBoundError();
-      setMaxFeePerGas(null);
-      setMaxPriorityFeePerGas(null);
-      setGasPrice(null);
-      setGasPriceHasBeenManuallySet(false);
-      setEstimateUsed(estimateLevel);
-    },
-    [
-      setInternalEstimateToUse,
-      handleGasLimitOutOfBoundError,
-      setMaxFeePerGas,
-      setMaxPriorityFeePerGas,
-      setGasPrice,
-      setGasPriceHasBeenManuallySet,
-      setEstimateUsed,
-    ],
-  );
-
   const onManualChange = useCallback(() => {
     setInternalEstimateToUse(CUSTOM_GAS_ESTIMATE);
     handleGasLimitOutOfBoundError();
     // Restore existing values
     setGasPrice(gasPrice);
     setGasLimit(gasLimit);
-    setUserEditedGasLimit(true);
     setMaxFeePerGas(maxFeePerGas);
     setMaxPriorityFeePerGas(maxPriorityFeePerGas);
     setGasPriceHasBeenManuallySet(true);
@@ -330,7 +287,6 @@ export function useGasFeeInputs(
     gasPrice,
     setGasLimit,
     gasLimit,
-    setUserEditedGasLimit,
     setMaxFeePerGas,
     maxFeePerGas,
     setMaxPriorityFeePerGas,
@@ -341,39 +297,25 @@ export function useGasFeeInputs(
   return {
     transaction,
     maxFeePerGas,
-    maxFeePerGasFiat,
-    setMaxFeePerGas,
     maxPriorityFeePerGas,
-    maxPriorityFeePerGasFiat,
-    setMaxPriorityFeePerGas,
     gasPrice,
     setGasPrice,
     gasLimit,
     setGasLimit,
     properGasLimit,
-    userEditedGasLimit,
     editGasMode,
     estimateToUse,
-    setEstimateToUse,
-    estimatedMinimumFiat,
-    estimatedMaximumFiat,
-    estimatedMaximumNative,
-    estimatedMinimumNative,
     isGasEstimatesLoading,
     maximumCostInHexWei,
     minimumCostInHexWei,
     estimateUsed,
     gasFeeEstimates,
-    gasEstimateType,
-    estimatedGasFeeTimeBounds,
     isNetworkBusy,
     onManualChange,
     estimatedBaseFee,
     // error and warnings
     balanceError,
     estimatesUnavailableWarning,
-    gasErrors,
-    gasWarnings,
     hasGasErrors,
     hasSimulationError,
     minimumGasLimitDec: hexToDecimal(minimumGasLimit),

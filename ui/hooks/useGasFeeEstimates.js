@@ -1,7 +1,6 @@
 import isEqual from 'lodash/isEqual';
 import { shallowEqual, useSelector } from 'react-redux';
 import {
-  getEstimatedGasFeeTimeBounds,
   getGasEstimateType,
   getGasFeeEstimates,
   getIsGasEstimatesLoading,
@@ -15,10 +14,6 @@ import { useSafeGasEstimatePolling } from './useSafeGasEstimatePolling';
  * @property {import(
  *   '@metamask/controllers'
  * ).GasFeeState['gasFeeEstimates']} gasFeeEstimates - The estimate object
- * @property {import(
- *   '@metamask/controllers'
- * ).GasFeeState['estimatedGasFeeTimeBounds']} [estimatedGasFeeTimeBounds] -
- *  estimated time boundaries for fee-market type estimates
  * @property {boolean} isGasEstimateLoading - indicates whether the gas
  *  estimates are currently loading.
  */
@@ -34,10 +29,6 @@ import { useSafeGasEstimatePolling } from './useSafeGasEstimatePolling';
 export function useGasFeeEstimates() {
   const gasEstimateType = useSelector(getGasEstimateType);
   const gasFeeEstimates = useSelector(getGasFeeEstimates, isEqual);
-  const estimatedGasFeeTimeBounds = useSelector(
-    getEstimatedGasFeeTimeBounds,
-    shallowEqual,
-  );
   const isGasEstimatesLoading = useSelector(getIsGasEstimatesLoading);
   const isNetworkBusy = useSelector(getIsNetworkBusy);
   useSafeGasEstimatePolling();
@@ -45,7 +36,6 @@ export function useGasFeeEstimates() {
   return {
     gasFeeEstimates,
     gasEstimateType,
-    estimatedGasFeeTimeBounds,
     isGasEstimatesLoading,
     isNetworkBusy,
   };

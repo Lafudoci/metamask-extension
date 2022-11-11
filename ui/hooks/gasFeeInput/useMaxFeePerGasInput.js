@@ -106,18 +106,6 @@ export function useMaxFeePerGasInput({
 
   const maximumCostInHexWei = getMaximumGasTotalInHexWei(gasSettings);
 
-  // We need to display thee estimated fiat currency impact of the maxFeePerGas
-  // field to the user. This hook calculates that amount. This also works for
-  // the gasPrice amount because in legacy transactions cost is always gasPrice
-  // * gasLimit.
-  const [, { value: maxFeePerGasFiat }] = useCurrencyDisplay(
-    maximumCostInHexWei,
-    {
-      numberOfDecimals: fiatNumberOfDecimals,
-      currency: fiatCurrency,
-    },
-  );
-
   // We specify whether to use the estimate value by checking if the state
   // value has been set. The state value is only set by user input and is wiped
   // when the user selects an estimate. Default here is '0' to avoid bignumber
@@ -134,7 +122,6 @@ export function useMaxFeePerGasInput({
 
   return {
     maxFeePerGas: maxFeePerGasToUse,
-    maxFeePerGasFiat: showFiat ? maxFeePerGasFiat : '',
     setMaxFeePerGas,
   };
 }
