@@ -1,14 +1,9 @@
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
-import { SECONDARY } from '../../helpers/constants/common';
-import {
-  checkNetworkAndAccountSupports1559,
-  getShouldShowFiat,
-} from '../../selectors';
+import { checkNetworkAndAccountSupports1559 } from '../../selectors';
 import { isLegacyTransaction } from '../../helpers/utils/transactions.util';
 
-import { useUserPreferencedCurrency } from '../useUserPreferencedCurrency';
 import { hexWEIToDecGWEI } from '../../../shared/lib/transactions-controller-utils';
 import { feeParamsAreCustom, getGasFeeEstimate } from './utils';
 
@@ -31,8 +26,6 @@ const getMaxPriorityFeePerGasFromTransaction = (
  * @typedef {object} MaxPriorityFeePerGasInputReturnType
  * @property {DecGweiString} [maxPriorityFeePerGas] - the maxPriorityFeePerGas
  *  input value.
- * @property {string} [maxPriorityFeePerGasFiat] - the maxPriorityFeePerGas
- *  converted to the user's preferred currency.
  * @property {(DecGweiString) => void} setMaxPriorityFeePerGas - state setter
  *  method to update the maxPriorityFeePerGas.
  */
@@ -55,11 +48,6 @@ export function useMaxPriorityFeePerGasInput({
   const supportsEIP1559 =
     useSelector(checkNetworkAndAccountSupports1559) &&
     !isLegacyTransaction(transaction?.txParams);
-
-  const { currency: fiatCurrency, numberOfDecimals: fiatNumberOfDecimals } =
-    useUserPreferencedCurrency(SECONDARY);
-
-  const showFiat = useSelector(getShouldShowFiat);
 
   const initialMaxPriorityFeePerGas = supportsEIP1559
     ? getMaxPriorityFeePerGasFromTransaction(transaction, gasFeeEstimates)
