@@ -209,7 +209,6 @@ export function useGasFeeInputs(
     gasEstimateType,
     gasFeeEstimates,
     gasLimit,
-    supportsEIP1559,
     transaction,
   });
 

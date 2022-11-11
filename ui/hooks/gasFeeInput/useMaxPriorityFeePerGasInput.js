@@ -56,7 +56,6 @@ export function useMaxPriorityFeePerGasInput({
   gasEstimateType,
   gasFeeEstimates,
   gasLimit,
-  supportsEIP1559,
   transaction,
 }) {
   const supportsEIP1559 =

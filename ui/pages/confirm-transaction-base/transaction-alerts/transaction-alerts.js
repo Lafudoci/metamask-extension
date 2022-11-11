@@ -20,13 +20,9 @@ const TransactionAlerts = ({
   const pendingTransactions = useSelector(submittedPendingTransactionsSelector);
   const t = useI18nContext();
 
-  if (!supportsEIP1559) {
-    return null;
-  }
-
   return (
     <div className="transaction-alerts">
-      {hasSimulationError && (
+      {supportsEIP1559 && hasSimulationError && (
         <ActionableMessage
           message={t('simulationErrorMessageV2')}
           useIcon
