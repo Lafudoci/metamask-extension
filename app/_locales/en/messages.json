@@ -256,9 +256,6 @@
   "advancedGasPriceTitle": {
     "message": "Gas price"
   },
-  "advancedOptions": {
-    "message": "Advanced options"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "Priority fee (aka “miner tip”) goes directly to miners and incentivizes them to prioritize your transaction."
   },
@@ -1047,9 +1044,6 @@
   "editContact": {
     "message": "Edit contact"
   },
-  "editGasEducationButtonText": {
-    "message": "How should I choose?"
-  },
   "editGasEducationHighExplanation": {
     "message": "This is best for time sensitive transactions (like Swaps) as it increases the likelihood of a successful transaction. If a Swap takes too long to process it may fail and result in losing some of your gas fee."
   },
@@ -1102,9 +1096,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "Max fee cannot be lower than max priority fee"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "The max fee is the most you’ll pay (base fee + priority fee)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "Max priority fee must be greater than 0 GWEI"
   },
@@ -1122,9 +1113,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "Priority fee is low for current network conditions"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "Max priority fee (aka “miner tip”) goes directly to miners and incentivizes them to prioritize your transaction. You’ll most often pay your max setting"
   },
   "editGasMedium": {
     "message": "Medium"
@@ -3175,9 +3163,6 @@
   },
   "showPrivateKeys": {
     "message": "Show Private Keys"
-  },
-  "showRecommendations": {
-    "message": "Show recommendations"
   },
   "showTestnetNetworks": {
     "message": "Show test networks"

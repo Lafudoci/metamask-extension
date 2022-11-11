@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "Prix du gaz"
   },
-  "advancedOptions": {
-    "message": "Options avancées"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "Les frais de priorité (aussi appelés « pourboire du mineur ») vont directement aux mineurs et les incitent à accorder la priorité à votre transaction."
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "Modifier le contact"
   },
-  "editGasEducationButtonText": {
-    "message": "Comment puis-je choisir ?"
-  },
   "editGasEducationHighExplanation": {
     "message": "Ce choix est préférable pour les transactions urgentes (comme les swaps), car cela multiplie les chances de réussite de la transaction. Si le traitement d’un swap prend trop de temps, il peut échouer et vous faire perdre une partie de vos frais de carburant."
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "Les frais maximaux ne peuvent pas être inférieurs aux frais de priorité maximaux"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "Les frais maximaux correspondent au montant le plus élevé que vous aurez à payer (frais de base + frais de priorité)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "Les frais de priorité maximaux doivent être supérieurs à 0 GWEI"
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "Les frais de priorité sont faibles par rapport aux conditions actuelles du réseau"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "Les frais de priorité maximaux (aussi appelés « pourboire du mineur ») vont directement aux mineurs et les incitent à accorder la priorité à votre transaction. Vous paierez le plus souvent votre réglage maximal"
   },
   "editGasMedium": {
     "message": "Moyen"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "Afficher les clés privées"
-  },
-  "showRecommendations": {
-    "message": "Afficher les recommandations"
   },
   "showTestnetNetworks": {
     "message": "Afficher les réseaux de test"

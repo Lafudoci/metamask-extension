@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "燃料价格"
   },
-  "advancedOptions": {
-    "message": "高级选项"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "优先费（又称“矿工费”）直接向矿工支付，激励他们优先处理您的交易。"
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "编辑联系信息"
   },
-  "editGasEducationButtonText": {
-    "message": "我应该如何选择？"
-  },
   "editGasEducationHighExplanation": {
     "message": "这最适合对时间敏感的交易（如交换），因为它能增加交易成功的可能性。如果交换需要太长的时间来处理，它可能会失败，并导致您损失一些燃料费。"
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "最大费用不能低于最大优先费用"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "最大费用是您将支付的最大费用（基本费用+优先费用）。"
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "最大优先费用必须大于0 GWEI。"
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "对于当前网络条件而言，优先费用较低"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "最大优先费（又称“矿工费”）直接向矿工支付，激励他们优先处理您的交易。您通常会支付您的最大设置"
   },
   "editGasMedium": {
     "message": "中"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "显示私钥"
-  },
-  "showRecommendations": {
-    "message": "显示建议"
   },
   "showTestnetNetworks": {
     "message": "显示测试网络"

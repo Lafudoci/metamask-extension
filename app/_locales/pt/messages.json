@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "Preço do Gas"
   },
-  "advancedOptions": {
-    "message": "Opções avançadas"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "A taxa de prioridade (ou seja, \"gorjeta do minerador\") vai diretamente para os mineradores e os incentiva a priorizar a sua transação."
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "Editar contato"
   },
-  "editGasEducationButtonText": {
-    "message": "Como eu escolho?"
-  },
   "editGasEducationHighExplanation": {
     "message": "Essa é a melhor opção para transações suscetíveis ao tempo (como swaps), pois aumenta a probabilidade de sucesso da transação. Se um swap demorar demais para ser processado, ele pode falhar e resultar na perda de parte da taxa de Gas."
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "A taxa máxima não pode ser inferior à taxa de prioridade máxima"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "A taxa máxima é o valor máximo que você pagará (taxa base + taxa de prioridade)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "A taxa de prioridade máxima deve ser superior a 0 GWEI"
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "A taxa de prioridade está baixa para as condições atuais da rede"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "A taxa máxima de prioridade (também conhecida como \"gorjeta do minerador\") vai diretamente para os mineradores e os incentiva a priorizar sua transação. Na maioria dos casos, você paga o valor máximo definido"
   },
   "editGasMedium": {
     "message": "Média"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "Mostrar Chaves Privadas"
-  },
-  "showRecommendations": {
-    "message": "Mostrar recomendações"
   },
   "showTestnetNetworks": {
     "message": "Mostrar redes de teste"

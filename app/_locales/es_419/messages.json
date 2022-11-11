@@ -167,9 +167,6 @@
   "advancedGasPriceTitle": {
     "message": "Precio del gas"
   },
-  "advancedOptions": {
-    "message": "Opciones avanzadas"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "La tarifa de prioridad (también llamada “propina del minero”) va directamente a los mineros para incentivarlos a priorizar su transacción."
   },
@@ -738,9 +735,6 @@
   "editContact": {
     "message": "Editar contacto"
   },
-  "editGasEducationButtonText": {
-    "message": "¿Cómo debería elegir?"
-  },
   "editGasEducationHighExplanation": {
     "message": "Esta es la mejor opción para las transacciones urgentes (como los Swaps) ya que aumenta la probabilidad de una transacción exitosa. Si un Swap tarda demasiado en procesarse, puede fallar y causar la pérdida de una parte de la tarifa de gas."
   },
@@ -793,9 +787,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "La tarifa base máxima no puede ser inferior a la tarifa de prioridad máxima"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "La tarifa máxima es lo máximo que se pagará (tarifa básica + tarifa de prioridad)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "La tarifa máxima de prioridad debe ser superior a 0 GWEI"
   },
@@ -813,9 +804,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "La tarifa de prioridad es baja para las condiciones actuales de la red"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "La tarifa de prioridad máxima (también llamada “propina del minero”) va directamente a los mineros para incentivarlos a priorizar su transacción. Lo más habitual es que se pague la configuración máxima"
   },
   "editGasMedium": {
     "message": "Medio"
@@ -2380,9 +2368,6 @@
   },
   "showPrivateKeys": {
     "message": "Mostrar claves privadas"
-  },
-  "showRecommendations": {
-    "message": "Mostrar recomendaciones"
   },
   "showTestnetNetworks": {
     "message": "Mostrar redes de prueba"

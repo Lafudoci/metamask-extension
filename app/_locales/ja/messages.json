@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "ガス代"
   },
-  "advancedOptions": {
-    "message": "詳細オプション"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "優先手数料 (別名「マイナーチップ」) はマイナーに直接支払われ、トランザクションを優先するインセンティブとなります。"
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "連絡先を編集"
   },
-  "editGasEducationButtonText": {
-    "message": "どのように選択すればいいですか?"
-  },
   "editGasEducationHighExplanation": {
     "message": "これは、トランザクションが成功する可能性を高めるため、急ぎのトランザクション (スワップなど) に最適です。スワップは処理に時間がかかりすぎると失敗し、ガス代の一部が失われる可能性があります。"
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "最大手数料を優先手数料よりも低くすることはできません"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "最大手数料は、支払う可能性のある最高額です (基本手数料 + 優先手数料)。"
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "最大優先手数料は0GWEIより高くなければなりません"
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "現在のネットワーク状況に対して優先手数料が低いです"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "最大優先手数料 (別名「マイナーチップ」) はマイナーに直接支払われ、トランザクションを優先するインセンティブとなります。通常最大設定額が支払われます"
   },
   "editGasMedium": {
     "message": "中"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "秘密鍵を表示"
-  },
-  "showRecommendations": {
-    "message": "推奨を表示"
   },
   "showTestnetNetworks": {
     "message": "テストネットワークを表示"

@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "가스 가격"
   },
-  "advancedOptions": {
-    "message": "고급 옵션"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "우선 요금(일명 \"채굴자 팁\")이란 나와 먼저 거래한 것에 대한 인센티브로 채굴자에게 직접 전달되는 금액입니다."
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "연락처 편집"
   },
-  "editGasEducationButtonText": {
-    "message": "어떻게 선택해야 하나요?"
-  },
   "editGasEducationHighExplanation": {
     "message": "이는 거래 성공 가능성을 높이기 때문에 시간에 (스왑과 같이) 민감한 거래에 가장 적합합니다. 스왑 처리에 시간이 너무 오래 걸리면 실패하고 가스 요금의 일부를 손해볼 수 있습니다."
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "최대 요금은 최대 우선 요금보다 낮을 수 없습니다."
   },
-  "editGasMaxFeeTooltip": {
-    "message": "최대 요금은 지급할 최대 금액입니다(기본 요금 + 우선 요금)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "최대 우선 요금은 0GWEI보다 커야 합니다."
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "우선 요금이 현재 네트워크 조건에 비해 낮습니다."
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "최대 우선 요금(일명 \"채굴자 팁\")이란 나와 먼저 거래한 것에 대한 인센티브로 채굴자에게 직접 전달되는 금액입니다. 대부분의 경우 최대 설정값을 지급합니다."
   },
   "editGasMedium": {
     "message": "중간"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "비공개 키 표시"
-  },
-  "showRecommendations": {
-    "message": "추천 보기"
   },
   "showTestnetNetworks": {
     "message": "테스트 네트워크 보기"

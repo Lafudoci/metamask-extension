@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "Harga gas"
   },
-  "advancedOptions": {
-    "message": "Opsi lanjutan"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "Biaya prioritas (alias “tip penambang”) langsung masuk ke penambang dan memberi insentif kepada mereka untuk memprioritaskan transaksi Anda."
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "Edit kontak"
   },
-  "editGasEducationButtonText": {
-    "message": "Bagaimana saya harus memilih?"
-  },
   "editGasEducationHighExplanation": {
     "message": "Ini adalah pilihan terbaik untuk transaksi di waktu sensitif (seperti Swap) karena meningkatkan kemungkinan keberhasilan transaksi. Jika pemrosesan Swap terlalu lama, maka berpotensi gagal dan mengakibatkan hilangnya sebagian biaya gas Anda."
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "Biaya maks tidak boleh lebih rendah dari biaya prioritas maks"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "Biaya maks merupakan biaya tertinggi yang akan Anda bayarkan (biaya dasar + biaya prioritas)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "Biaya prioritas maks harus lebih besar dari 0 GWEI"
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "Biaya prioritas rendah untuk kondisi jaringan saat ini"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "Biaya prioritas maks (alias “tip penambang”) langsung masuk ke penambang dan memberi insentif kepada mereka untuk memprioritaskan transaksi Anda. Pengaturan maks akan menjadi yang paling sering Anda bayar"
   },
   "editGasMedium": {
     "message": "Sedang"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "Tampilkan Kunci Privat"
-  },
-  "showRecommendations": {
-    "message": "Tampilkan rekomendasi"
   },
   "showTestnetNetworks": {
     "message": "Tampilkan jaringan pengujian"

@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "Presyo ng gas"
   },
-  "advancedOptions": {
-    "message": "Mga Advanced na Opsyon"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "Ang priority fee (kilala rin bilang “tip ng miner”) ay direktang napupunta sa mga miner at ginagawang insentibo ang mga ito upang unahin ang iyong mga transaksyon."
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "I-edit ang contact"
   },
-  "editGasEducationButtonText": {
-    "message": "Paano ako pipili?"
-  },
   "editGasEducationHighExplanation": {
     "message": "Pinakamainam ito para sa mga transaksyong sensitibo sa oras (tulad ng Swap) dahil pinapataas nito ang posibilidad ng isang matagumpay na transaksyon. Kung ang isang Swap ay tumatagal ng masyadong mahaba upang maproseso ito ay maaaring mabigo at magresulta sa pagkawala ng ilan sa iyong gas fee."
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "Ang max fee ay hindi dapat mas mababa kaysa max priority fee"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "Ang max fee ay ang pinakamataas na babayaran mo (base fee + priority fee)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "Ang max priority fee ay dapat mas mataas sa 0 GWEI"
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "Ang priority fee ay mababa para sa kasalukuyang mga kundisyon ng network"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "Ang max priority fee (kilala rin bilang “tip ng miner”) ay direktang napupunta sa mga miner at ginagawang insentibo ang mga ito upang unahin ang iyong mga transaksyon. Madalas kang magbabayad sa iyong max setting"
   },
   "editGasMedium": {
     "message": "Medium"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "Ipakita ang Mga Pribadong Key"
-  },
-  "showRecommendations": {
-    "message": "Ipakita ang mga Rekomendasyon"
   },
   "showTestnetNetworks": {
     "message": "Ipakita ang mga test network"

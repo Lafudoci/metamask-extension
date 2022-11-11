@@ -247,9 +247,6 @@
   "advancedGasPriceTitle": {
     "message": "Gaspreis"
   },
-  "advancedOptions": {
-    "message": "Erweiterte Optionen"
-  },
   "advancedPriorityFeeToolTip": {
     "message": "Prioritätsgebühr (alias „Miner Tip“) geht direkt an Miner und veranlasst sie, Ihre Transaktion zu priorisieren."
   },
@@ -1011,9 +1008,6 @@
   "editContact": {
     "message": "Kontakt bearbeiten"
   },
-  "editGasEducationButtonText": {
-    "message": "Wie soll ich wählen?"
-  },
   "editGasEducationHighExplanation": {
     "message": "Dies ist am besten für zeitsensible Transaktionen (wie Swaps), da es die Wahrscheinlichkeit einer erfolgreichen Transaktion erhöht. Wenn es zu lange dauert, einen Swap zu verarbeiten, kann dies fehlschlagen und dazu führen, dass ein Teil Ihrer Gasgebühr verloren geht."
   },
@@ -1066,9 +1060,6 @@
   "editGasMaxFeePriorityImbalance": {
     "message": "Die maximale Gebühr darf nicht niedriger sein als die maximale Prioritätsgebühr"
   },
-  "editGasMaxFeeTooltip": {
-    "message": "Die Maximalgebühr  ist der Höchstbetrag, den Sie zahlen müssen (Basisgebühr + Prioritätsgebühr)."
-  },
   "editGasMaxPriorityFeeBelowMinimum": {
     "message": "Die maximale Prioritätsgebühr muss größer als 0 GWEI sein"
   },
@@ -1086,9 +1077,6 @@
   },
   "editGasMaxPriorityFeeLowV2": {
     "message": "Die Prioritätsgebühr ist niedrig für aktuelle Netzwerkbedingungen"
-  },
-  "editGasMaxPriorityFeeTooltip": {
-    "message": "Die max. Prioritätsgebühr (alias „Miner Tip“) geht direkt an die Miner und veranlasst sie, Ihre Transaktion zu priorisieren. Sie zahlen meist Ihre maximale Einstellung"
   },
   "editGasMedium": {
     "message": "Mittel"
@@ -3101,9 +3089,6 @@
   },
   "showPrivateKeys": {
     "message": "Private Keys anzeigen"
-  },
-  "showRecommendations": {
-    "message": "Empfehlungen anzeigen"
   },
   "showTestnetNetworks": {
     "message": "Test-Netzwerke anzeigen"
