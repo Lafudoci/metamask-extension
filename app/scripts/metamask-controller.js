@@ -1720,10 +1720,6 @@ export default class MetamaskController extends EventEmitter {
         appStateController.setCollectiblesDetectionNoticeDismissed.bind(
           appStateController,
         ),
-      setEnableEIP1559V2NoticeDismissed:
-        appStateController.setEnableEIP1559V2NoticeDismissed.bind(
-          appStateController,
-        ),
       updateCollectibleDropDownState:
         appStateController.updateCollectibleDropDownState.bind(
           appStateController,
