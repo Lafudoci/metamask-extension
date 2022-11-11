@@ -20,7 +20,6 @@ import {
   TYPOGRAPHY,
   FONT_WEIGHT,
 } from '../../../helpers/constants/design-system';
-import InfoTooltip from '../../ui/info-tooltip/info-tooltip';
 
 import { getGasFeeTimeEstimate } from '../../../store/actions';
 import { GAS_FORM_ERRORS } from '../../../helpers/constants/gas';
@@ -48,7 +47,6 @@ export default function GasTiming({
 
   const [customEstimatedTime, setCustomEstimatedTime] = useState(null);
   const t = useContext(I18nContext);
-  const { estimateUsed } = useGasFeeContext();
 
   // If the user has chosen a value lower than the low gas fee estimate,
   // We'll need to use the useEffect hook below to make a call to calculate
@@ -141,6 +139,9 @@ export default function GasTiming({
       ]);
     }
   } else {
+    if (estimateUsed === 'low') {
+      attitude = 'negative';
+    }
     // If the user has chosen a value less than our low estimate,
     // calculate a potential wait time
     if (isUnknownLow) {

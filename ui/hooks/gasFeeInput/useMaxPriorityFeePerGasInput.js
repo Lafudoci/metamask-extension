@@ -43,7 +43,6 @@ const getMaxPriorityFeePerGasFromTransaction = (
 
 /**
  * @param options
- * @param options.supportsEIP1559
  * @param options.estimateToUse
  * @param options.gasEstimateType
  * @param options.gasFeeEstimates

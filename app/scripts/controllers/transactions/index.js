@@ -898,10 +898,10 @@ export default class TransactionController extends EventEmitter {
         //  then we set maxFeePerGas and maxPriorityFeePerGas to the suggested gasPrice.
         txMeta.txParams.maxFeePerGas = txMeta.txParams.gasPrice;
         txMeta.txParams.maxPriorityFeePerGas = txMeta.txParams.gasPrice;
-        if (txMeta.origin !== ORIGIN_METAMASK) {
-          txMeta.userFeeLevel = PRIORITY_LEVELS.DAPP_SUGGESTED;
-        } else {
+        if (txMeta.origin === ORIGIN_METAMASK) {
           txMeta.userFeeLevel = CUSTOM_GAS_ESTIMATE;
+        } else {
+          txMeta.userFeeLevel = PRIORITY_LEVELS.DAPP_SUGGESTED;
         }
       } else {
         if (
