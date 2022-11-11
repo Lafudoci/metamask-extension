@@ -183,20 +183,20 @@ describe('useGasFeeErrors', () => {
     });
   });
 
-  describe('maxPriorityFee warning', () => {
+  describe('maxPriorityFee gasErrors', () => {
     describe('EIP1559 compliant estimates', () => {
       beforeEach(() => {
         configureEIP1559();
       });
       it('does not return maxPriorityFeeWarning if maxPriorityFee is > suggestedMaxPriorityFeePerGas', () => {
         const { result } = renderUseGasFeeErrorsHook();
-        expect(result.current.gasWarnings.maxPriorityFee).toBeUndefined();
+        expect(result.current.gasErrors.maxPriorityFee).toBeUndefined();
       });
       it('return maxPriorityFeeWarning if maxPriorityFee is < suggestedMaxPriorityFeePerGas', () => {
         const { result } = renderUseGasFeeErrorsHook({
           maxPriorityFeePerGas: '1',
         });
-        expect(result.current.gasWarnings.maxPriorityFee).toBe(
+        expect(result.current.gasErrors.maxPriorityFee).toBe(
           GAS_FORM_ERRORS.MAX_PRIORITY_FEE_TOO_LOW,
         );
       });
@@ -204,7 +204,7 @@ describe('useGasFeeErrors', () => {
         const { result } = renderUseGasFeeErrorsHook({
           maxPriorityFeePerGas: '100',
         });
-        expect(result.current.gasWarnings.maxPriorityFee).toBe(
+        expect(result.current.gasErrors.maxPriorityFee).toBe(
           GAS_FORM_ERRORS.MAX_PRIORITY_FEE_HIGH_WARNING,
         );
       });
@@ -213,31 +213,31 @@ describe('useGasFeeErrors', () => {
       beforeEach(() => {
         configureLegacy();
       });
-      it('does not return maxPriorityFeeWarning if maxPriorityFee is < gasFeeEstimates.low.suggestedMaxPriorityFeePerGas', () => {
+      it('does not return maxPriorityFee error if maxPriorityFee is < gasFeeEstimates.low.suggestedMaxPriorityFeePerGas', () => {
         const { result } = renderUseGasFeeErrorsHook({
           maxPriorityFeePerGas: '1',
           ...LEGACY_GAS_ESTIMATE_RETURN_VALUE,
         });
-        expect(result.current.gasWarnings.maxPriorityFee).toBeUndefined();
+        expect(result.current.gasErrors.maxPriorityFee).toBeUndefined();
         expect(result.current.hasGasErrors).toBe(false);
       });
     });
   });
 
-  describe('maxFee warning', () => {
+  describe('maxFee gasErrors', () => {
     describe('EIP1559 compliant estimates', () => {
       beforeEach(() => {
         configureEIP1559();
       });
       it('does not return maxFeeWarning if maxFee is > suggestedMaxFeePerGas', () => {
         const { result } = renderUseGasFeeErrorsHook();
-        expect(result.current.gasWarnings.maxFee).toBeUndefined();
+        expect(result.current.gasErrors.maxFee).toBeUndefined();
       });
       it('return maxFeeWarning if maxFee is < suggestedMaxFeePerGas', () => {
         const { result } = renderUseGasFeeErrorsHook({
           maxFeePerGas: '20',
         });
-        expect(result.current.gasWarnings.maxFee).toBe(
+        expect(result.current.gasErrors.maxFee).toBe(
           GAS_FORM_ERRORS.MAX_FEE_TOO_LOW,
         );
       });
@@ -245,7 +245,7 @@ describe('useGasFeeErrors', () => {
         const { result } = renderUseGasFeeErrorsHook({
           maxFeePerGas: '1000',
         });
-        expect(result.current.gasWarnings.maxFee).toBe(
+        expect(result.current.gasErrors.maxFee).toBe(
           GAS_FORM_ERRORS.MAX_FEE_HIGH_WARNING,
         );
       });
@@ -259,7 +259,7 @@ describe('useGasFeeErrors', () => {
           maxFeePerGas: '1',
           ...LEGACY_GAS_ESTIMATE_RETURN_VALUE,
         });
-        expect(result.current.gasWarnings.maxFee).toBeUndefined();
+        expect(result.current.gasErrors.maxFee).toBeUndefined();
       });
     });
   });

@@ -165,52 +165,6 @@ describe('useGasFeeInputs', () => {
           .suggestedMaxPriorityFeePerGas,
       );
     });
-
-    it('updates values when user modifies maxFeePerGas', () => {
-      useSelector.mockImplementation(
-        generateUseSelectorRouter({
-          checkNetworkAndAccountSupports1559Response: true,
-        }),
-      );
-      const { result } = renderHook(() =>
-        useGasFeeInputs(null, {
-          txParams: {},
-          userFeeLevel: GAS_RECOMMENDATIONS.MEDIUM,
-        }),
-      );
-      expect(result.current.maxFeePerGas).toBe(
-        FEE_MARKET_ESTIMATE_RETURN_VALUE.gasFeeEstimates.medium
-          .suggestedMaxFeePerGas,
-      );
-      let totalEthGasFee = getTotalCostInETH(
-        FEE_MARKET_ESTIMATE_RETURN_VALUE.gasFeeEstimates.medium
-          .suggestedMaxFeePerGas,
-        result.current.gasLimit,
-      );
-      let totalMaxFiat = (
-        Number(totalEthGasFee) * MOCK_ETH_USD_CONVERSION_RATE
-      ).toFixed(2);
-      expect(result.current.estimatedMaximumNative).toBe(
-        `${totalEthGasFee} ETH`,
-      );
-      expect(result.current.estimatedMaximumFiat).toBe(`$${totalMaxFiat}`);
-      // TODO: test minimum fiat too
-      // expect(result.current.estimatedMinimumFiat).toBe(`$${totalMaxFiat}`);
-      act(() => {
-        result.current.setMaxFeePerGas('90');
-      });
-      totalEthGasFee = getTotalCostInETH('90', result.current.gasLimit);
-      totalMaxFiat = (
-        Number(totalEthGasFee) * MOCK_ETH_USD_CONVERSION_RATE
-      ).toFixed(2);
-      expect(result.current.maxFeePerGas).toBe('90');
-      expect(result.current.estimatedMaximumNative).toBe(
-        `${totalEthGasFee} ETH`,
-      );
-      expect(result.current.estimatedMaximumFiat).toBe(`$${totalMaxFiat}`);
-      // TODO: test minimum fiat too
-      // expect(result.current.estimatedMinimumFiat).toBe(`$${totalMaxFiat}`);
-    });
   });
 
   describe('when balance is sufficient for minimum transaction cost', () => {
