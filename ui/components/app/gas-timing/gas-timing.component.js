@@ -8,7 +8,7 @@ import { GAS_ESTIMATE_TYPES } from '../../../../shared/constants/gas';
 
 import { usePrevious } from '../../../hooks/usePrevious';
 import { I18nContext } from '../../../contexts/i18n';
-import { useGasFeeContext } from '../../../ui/contexts/gasFee';
+import { useGasFeeContext } from '../../../contexts/gasFee';
 
 import {
   getGasEstimateType,
