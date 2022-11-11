@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " ऑटो डिटेक्ट सक्षम करें"
   },
-  "enableEIP1559V2": {
-    "message": "उन्नत गैस शुल्क UI सक्षम करें"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "हमने अपडेट किया है कि गैस शुल्क अनुमान और कस्टमाइज़ेशन कैसे काम करता है।"
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "सेटिंग्स में उन्नत गैस शुल्क UI को चालू करें"
-  },
-  "enableEIP1559V2Description": {
-    "message": "हमने अपडेट किया है कि गैस शुल्क अनुमान और कस्टमाइज़ेशन कैसे काम करता है। अगर आप नए गैस अनुभव का इस्तेमाल करना चाहते हैं तो चालू करें। $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "नया गैस अनुभव"
-  },
   "enableFromSettings": {
     "message": " इसे सेटिंग्स से इनेबल करें।"
   },

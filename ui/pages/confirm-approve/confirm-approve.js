@@ -26,7 +26,6 @@ import {
   getRpcPrefsForCurrentProvider,
   getIsMultiLayerFeeNetwork,
   checkNetworkAndAccountSupports1559,
-  getEIP1559V2Enabled,
   getIsImprovedTokenAllowanceEnabled,
 } from '../../selectors';
 import { useApproveTransaction } from '../../hooks/useApproveTransaction';

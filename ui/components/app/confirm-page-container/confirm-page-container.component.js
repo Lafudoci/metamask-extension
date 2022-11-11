@@ -29,7 +29,6 @@ import { TYPOGRAPHY } from '../../../helpers/constants/design-system';
 
 import NetworkAccountBalanceHeader from '../network-account-balance-header/network-account-balance-header';
 import DepositPopover from '../deposit-popover/deposit-popover';
-import EnableEIP1559V2Notice from './enableEIP1559V2-notice';
 import {
   ConfirmPageContainerHeader,
   ConfirmPageContainerContent,
@@ -264,7 +263,6 @@ export default class ConfirmPageContainer extends Component {
               </>
             )}
           </div>
-          <EnableEIP1559V2Notice isFirstAlert={!showAddToAddressDialog} />
           {contentComponent || (
             <ConfirmPageContainerContent
               action={action}

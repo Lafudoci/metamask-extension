@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Aktifkan deteksi otomatis"
   },
-  "enableEIP1559V2": {
-    "message": "Aktifkan UI biaya gas yang ditingkatkan"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Kami telah memperbarui cara kerja estimasi dan penyesuaian biaya gas."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Aktifkan UI biaya gas yang ditingkatkan di Pengaturan"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Kami telah memperbarui cara kerja estimasi dan penyesuaian gas. Aktifkan jika Anda ingin menggunakan pengalaman gas baru. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Pengalaman gas baru"
-  },
   "enableFromSettings": {
     "message": " Aktifkan dari Pengaturan."
   },

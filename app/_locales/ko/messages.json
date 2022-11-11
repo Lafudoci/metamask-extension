@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " 자동 감지 활성화"
   },
-  "enableEIP1559V2": {
-    "message": "향상된 가스 수수료 UI 활성화"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "가스비 견적 산정 방법과 맞춤화 작업을 업데이트했습니다."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "설정에서 향상된 가스 수수료 UI를 활성화"
-  },
-  "enableEIP1559V2Description": {
-    "message": "가스비 견적 산정 방법과 맞춤화 작업을 업데이트했습니다. 새로운 가스 경험을 사용하기 원하시면 이 기능을 켜세요. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "새로운 가스 경험"
-  },
   "enableFromSettings": {
     "message": " 설정에서 이 기능을 활성화합니다."
   },

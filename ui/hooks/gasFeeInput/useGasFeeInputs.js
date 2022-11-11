@@ -11,7 +11,6 @@ import { GAS_FORM_ERRORS } from '../../helpers/constants/gas';
 import {
   checkNetworkAndAccountSupports1559,
   getAdvancedInlineGasShown,
-  getEIP1559V2Enabled,
 } from '../../selectors';
 import { isLegacyTransaction } from '../../helpers/utils/transactions.util';
 import { useGasFeeEstimates } from '../useGasFeeEstimates';

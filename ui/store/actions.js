@@ -2778,18 +2778,6 @@ export function setAdvancedGasFee(val) {
   };
 }
 
-export function setEIP1559V2Enabled(val) {
-  return async (dispatch) => {
-    dispatch(showLoadingIndication());
-    log.debug(`background.setEIP1559V2Enabled`);
-    try {
-      await submitRequestToBackground('setEIP1559V2Enabled', [val]);
-    } finally {
-      dispatch(hideLoadingIndication());
-    }
-  };
-}
-
 export function setTheme(val) {
   return async (dispatch) => {
     dispatch(showLoadingIndication());
@@ -3790,10 +3778,6 @@ export function setCollectiblesDetectionNoticeDismissed() {
   return submitRequestToBackground('setCollectiblesDetectionNoticeDismissed', [
     true,
   ]);
-}
-
-export function setEnableEIP1559V2NoticeDismissed() {
-  return submitRequestToBackground('setEnableEIP1559V2NoticeDismissed', [true]);
 }
 
 export function setImprovedTokenAllowanceEnabled(

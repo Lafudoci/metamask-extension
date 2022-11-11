@@ -860,22 +860,6 @@
   "enableAutoDetect": {
     "message": " Activar autodetección"
   },
-  "enableEIP1559V2": {
-    "message": "Activar interfaz de tarifa de gas mejorada"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Hemos actualizado la forma en que funciona la estimación y la personalización de la tarifa de gas."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Activar interfaz de tarifa de gas mejorada en Configuración"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Hemos actualizado la forma en que funciona la estimación y la personalización de la tarifa de gas. Actívela si desea utilizar la nueva experiencia de gas. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Nueva experiencia de gas"
-  },
   "enableFromSettings": {
     "message": " Actívela en Configuración."
   },

@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Otomatik algılamayı etkinleştir"
   },
-  "enableEIP1559V2": {
-    "message": "Gelişmiş Gas Ücreti Kullanıcı Arayüzü'nü Etkinleştir"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Gas ücreti tahmini ve özelleştirmenin nasıl çalıştığını güncelledik."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Ayarlarda Gelişmiş Gas Ücreti Kullanıcı Arayüzü'nü aç"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Gas tahmini ve özelleştirmenin nasıl çalıştığını güncelledik. Yeni gas deneyimini kullanmak istiyorsan aç. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Yeni gas deneyimi"
-  },
   "enableFromSettings": {
     "message": " Ayarlardan etkinleştir."
   },

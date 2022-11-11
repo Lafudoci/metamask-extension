@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " 启用自动检测"
   },
-  "enableEIP1559V2": {
-    "message": "启用增强型燃料费用户界面"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "我们已经更新了燃料费用估算和定制的方式。"
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "在设置中开启增强型燃料费用户界面"
-  },
-  "enableEIP1559V2Description": {
-    "message": "我们已经更新了燃料估算和定制的方式。如果您想使用新的燃料体验，请开启。$1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "新燃料体验"
-  },
   "enableFromSettings": {
     "message": " 从设置中启用它。"
   },

@@ -158,7 +158,6 @@ export default class ConfirmTransactionBase extends Component {
     supportsEIP1559: PropTypes.bool,
     hardwareWalletRequiresConnection: PropTypes.bool,
     isMultiLayerFeeNetwork: PropTypes.bool,
-    eip1559V2Enabled: PropTypes.bool,
     isBuyableChain: PropTypes.bool,
     isApprovalOrRejection: PropTypes.bool,
     ///: BEGIN:ONLY_INCLUDE_IN(flask)

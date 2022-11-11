@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Paganahin ang autodetect"
   },
-  "enableEIP1559V2": {
-    "message": "Paganahin ang Pinahusay na UI ng Singil sa Gas"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Na-update na namin kung paano gumagana ang pagtantiya at pag-customize ng singil sa gas."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "I-on sa Settings ang pinahusay na UI ng singil sa gas"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Na-update na namin kung paano gumagana ang pagtantiya at pag-customize ng gas. I-on kung gusto mong gamitin ang bagong karanasan sa gas. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Bagong karanasan sa gas"
-  },
   "enableFromSettings": {
     "message": " Paganahin ito mula sa Settings."
   },

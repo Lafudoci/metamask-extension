@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Включить автообнаружение"
   },
-  "enableEIP1559V2": {
-    "message": "Включить расширенный интерфейс платы за газ"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Мы обновили принцип оценки и настройки платы за газ."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Включите расширенный интерфейс платы за газ в Настройках."
-  },
-  "enableEIP1559V2Description": {
-    "message": "Мы обновили принцип работы оценки и настройки газа. Включите эту опцию, если хотите использовать новый интерфейс газа. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Новый интерфейс газа"
-  },
   "enableFromSettings": {
     "message": " Включите его в Настройках."
   },

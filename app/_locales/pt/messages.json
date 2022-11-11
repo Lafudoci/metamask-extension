@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Ativar detecção automática"
   },
-  "enableEIP1559V2": {
-    "message": "Ativar UI aprimorada para taxa de gás"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Atualizamos o funcionamento da estimativa e personalização da taxa de gás."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Ative a UI aprimorada para taxa de gás nas configurações"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Atualizamos o funcionamento da estimativa e personalização de gás. Ative se quiser desfrutar a nova experiência de gás. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Nova experiência de gás"
-  },
   "enableFromSettings": {
     "message": " Habilite-a nas configurações."
   },

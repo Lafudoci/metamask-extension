@@ -107,10 +107,6 @@ const t = (key) => {
       return 'Enhanced token detection';
     case 'enhancedTokenDetectionDescription':
       return "ConsenSys' token API aggregates a list of tokens from various third party token lists. When turned on, tokens will be automatically detected, and searchable, on Ethereum mainnet, Binance, Polygon and Avalanche. When turned off, automatic detection and search can only be done on Ethereum mainnet.";
-    case 'enableEIP1559V2':
-      return 'Enable enhanced gas fee UI';
-    case 'enableEIP1559V2Description':
-      return "We've updated how gas estimation and customization works. Turn on if you'd like to use the new gas experience. Learn more";
     case 'enableOpenSeaAPI':
       return 'Enable OpenSea API';
     case 'enableOpenSeaAPIDescription':

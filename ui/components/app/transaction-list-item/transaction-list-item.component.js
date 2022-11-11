@@ -27,10 +27,7 @@ import {
   TransactionModalContextProvider,
   useTransactionModalContext,
 } from '../../../contexts/transaction-modal';
-import {
-  checkNetworkAndAccountSupports1559,
-  getEIP1559V2Enabled,
-} from '../../../selectors';
+import { checkNetworkAndAccountSupports1559 } from '../../../selectors';
 import { isLegacyTransaction } from '../../../helpers/utils/transactions.util';
 import Button from '../../ui/button';
 import AdvancedGasFeePopover from '../advanced-gas-fee-popover';
@@ -281,7 +278,6 @@ const TransactionListItem = (props) => {
   const { transactionGroup } = props;
   const [editGasMode, setEditGasMode] = useState();
   const transaction = transactionGroup.primaryTransaction;
-  const eip1559V2Enabled = useSelector(getEIP1559V2Enabled);
 
   const supportsEIP1559 =
     useSelector(checkNetworkAndAccountSupports1559) &&

@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Activer la détection automatique"
   },
-  "enableEIP1559V2": {
-    "message": "Activer l’interface utilisateur améliorée des frais de transaction"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Nous avons mis à jour le fonctionnement de l’estimation et de la personnalisation des gas fees."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Activez l’interface utilisateur améliorée des frais de transaction dans les Paramètres"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Nous avons mis à jour le fonctionnement de l’estimation et de la personnalisation du gas. À activer si vous souhaitez utiliser la nouvelle expérience de gas. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Nouvelle expérience de gas"
-  },
   "enableFromSettings": {
     "message": " Activez-la depuis les Paramètres."
   },

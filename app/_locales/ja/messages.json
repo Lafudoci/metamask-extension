@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " 自動検出を有効にする"
   },
-  "enableEIP1559V2": {
-    "message": "改善されたガス代 UI を有効にする"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "ガス代の見積もりとカスタマイズが新しくなりました。"
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "設定で、改善されたガス代 UI をオンにしてください"
-  },
-  "enableEIP1559V2Description": {
-    "message": "ガス代の見積もりとカスタマイズが新しくなりました。新しいガス代エクスペリエンスを利用するには、オンにしてください。$1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "新しいガス代エクスペリエンス"
-  },
   "enableFromSettings": {
     "message": " 設定で有効にします。"
   },

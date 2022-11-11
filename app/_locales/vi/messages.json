@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Bật tự động phát hiện"
   },
-  "enableEIP1559V2": {
-    "message": "Bật giao diện phí gas nâng cao"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Chúng tôi đã cập nhật cách thức hoạt động của việc ước tính và tùy chỉnh phí gas."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Bật giao diện phí gas nâng cao trong phần Cài đặt"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Chúng tôi đã cập nhật cách thức hoạt động của việc ước tính và tùy chỉnh phí gas. Bật lên nếu bạn muốn sử dụng trải nghiệm gas mới. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Trải nghiệm gas mới"
-  },
   "enableFromSettings": {
     "message": " Bật lên trong Cài Đặt."
   },

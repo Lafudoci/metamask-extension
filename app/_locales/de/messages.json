@@ -1133,22 +1133,6 @@
   "enableAutoDetect": {
     "message": " Auto-Erkennung aktivieren"
   },
-  "enableEIP1559V2": {
-    "message": "Verbesserte Gasgebühr-UI aktivieren"
-  },
-  "enableEIP1559V2AlertMessage": {
-    "message": "Wir haben die Funktionsweise der Gaspreisschätzung und -anpassung aktualisiert."
-  },
-  "enableEIP1559V2ButtonText": {
-    "message": "Verbesserte Gaspreis-UI in Einstellungen einschalten"
-  },
-  "enableEIP1559V2Description": {
-    "message": "Wir haben die Funktionsweise der Gasschätzung und -anpassung aktualisiert. Schalten Sie ein, wenn Sie das neue Gaserlebnis nutzen möchten. $1",
-    "description": "$1 here is Learn More link"
-  },
-  "enableEIP1559V2Header": {
-    "message": "Neues Gaserlebnis"
-  },
   "enableFromSettings": {
     "message": " In den Einstellungen aktivieren."
   },
