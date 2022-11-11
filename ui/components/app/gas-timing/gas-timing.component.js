@@ -8,6 +8,7 @@ import { GAS_ESTIMATE_TYPES } from '../../../../shared/constants/gas';
 
 import { usePrevious } from '../../../hooks/usePrevious';
 import { I18nContext } from '../../../contexts/i18n';
+import { useGasFeeContext } from '../../../ui/contexts/gasFee';
 
 import {
   getGasEstimateType,
@@ -15,7 +16,6 @@ import {
   getIsGasEstimatesLoading,
 } from '../../../ducks/metamask/metamask';
 
-import { useGasFeeContext } from '../../ui/contexts/gasFee';
 import Typography from '../../ui/typography/typography';
 import {
   TYPOGRAPHY,
