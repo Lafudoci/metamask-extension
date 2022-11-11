@@ -24,15 +24,11 @@ import {
   createSpeedUpTransaction,
   hideModal,
   updateTransactionGasFees,
-  updateCustomSwapsEIP1559GasParams,
-  updateSwapsUserFeeLevel,
   hideLoadingIndication,
   showLoadingIndication,
 } from '../../../store/actions';
 import LoadingHeartBeat from '../../ui/loading-heartbeat';
-import { checkNetworkAndAccountSupports1559 } from '../../../selectors';
 import { useIncrementedGasFees } from '../../../hooks/useIncrementedGasFees';
-import { isLegacyTransaction } from '../../../helpers/utils/transactions.util';
 import { hexToDecimal } from '../../../../shared/lib/metamask-controller-utils';
 import { decimalToHex } from '../../../../shared/lib/transactions-controller-utils';
 
@@ -48,17 +44,10 @@ export default function EditGasPopover({
 }) {
   const t = useContext(I18nContext);
   const dispatch = useDispatch();
-  const supportsEIP1559 =
-    useSelector(checkNetworkAndAccountSupports1559) &&
-    !isLegacyTransaction(transaction?.txParams);
   const gasLoadingAnimationIsShowing = useSelector(
     getGasLoadingAnimationIsShowing,
   );
 
-  const showEducationButton =
-    (mode === EDIT_GAS_MODES.MODIFY_IN_PLACE ||
-      mode === EDIT_GAS_MODES.SWAPS) &&
-    supportsEIP1559;
   const [showEducationContent, setShowEducationContent] = useState(false);
 
   const [dappSuggestedGasFeeAcknowledged, setDappSuggestedGasFeeAcknowledged] =
@@ -80,28 +69,14 @@ export default function EditGasPopover({
   }
 
   const {
-    maxPriorityFeePerGas,
-    setMaxPriorityFeePerGas,
-    maxPriorityFeePerGasFiat,
-    maxFeePerGas,
-    setMaxFeePerGas,
-    maxFeePerGasFiat,
-    estimatedMaximumNative,
-    estimatedMinimumNative,
     isGasEstimatesLoading,
-    gasEstimateType,
     gasPrice,
     setGasPrice,
     gasLimit,
     setGasLimit,
     properGasLimit,
     estimateToUse,
-    setEstimateToUse,
-    estimatedMinimumFiat,
-    estimatedMaximumFiat,
     hasGasErrors,
-    gasErrors,
-    gasWarnings,
     onManualChange,
     balanceError,
     estimatesUnavailableWarning,
@@ -144,20 +119,9 @@ export default function EditGasPopover({
       estimateUsed: estimateToUse,
     };
 
-    if (supportsEIP1559) {
-      newGasSettings.maxFeePerGas = decGWEIToHexWEI(maxFeePerGas ?? gasPrice);
-      newGasSettings.maxPriorityFeePerGas = decGWEIToHexWEI(
-        maxPriorityFeePerGas ?? maxFeePerGas ?? gasPrice,
-      );
-    } else {
-      newGasSettings.gasPrice = decGWEIToHexWEI(gasPrice);
-    }
+    newGasSettings.gasPrice = decGWEIToHexWEI(gasPrice);
 
     const cleanTransactionParams = { ...updatedTransaction.txParams };
-
-    if (supportsEIP1559) {
-      delete cleanTransactionParams.gasPrice;
-    }
 
     const updatedTxMeta = {
       ...updatedTransaction,
@@ -194,15 +158,6 @@ export default function EditGasPopover({
         );
         dispatch(hideLoadingIndication());
         break;
-      case EDIT_GAS_MODES.SWAPS:
-        // This popover component should only be used for the "FEE_MARKET" type in Swaps.
-        if (supportsEIP1559) {
-          dispatch(
-            updateSwapsUserFeeLevel(estimateToUse || CUSTOM_GAS_ESTIMATE),
-          );
-          dispatch(updateCustomSwapsEIP1559GasParams(newGasSettings));
-        }
-        break;
       default:
         break;
     }
@@ -216,9 +171,6 @@ export default function EditGasPopover({
     gasLimit,
     gasPrice,
     transaction.originalGasEstimate,
-    maxFeePerGas,
-    maxPriorityFeePerGas,
-    supportsEIP1559,
     estimateToUse,
     estimatedBaseFee,
     defaultEstimateToUse,
@@ -270,35 +222,18 @@ export default function EditGasPopover({
           <>
             {process.env.IN_TEST ? null : <LoadingHeartBeat />}
             <EditGasDisplay
-              showEducationButton={showEducationButton}
               dappSuggestedGasFeeAcknowledged={dappSuggestedGasFeeAcknowledged}
               setDappSuggestedGasFeeAcknowledged={
                 setDappSuggestedGasFeeAcknowledged
               }
-              maxPriorityFeePerGas={maxPriorityFeePerGas}
-              setMaxPriorityFeePerGas={setMaxPriorityFeePerGas}
-              maxPriorityFeePerGasFiat={maxPriorityFeePerGasFiat}
-              maxFeePerGas={maxFeePerGas}
-              setMaxFeePerGas={setMaxFeePerGas}
-              maxFeePerGasFiat={maxFeePerGasFiat}
-              estimatedMaximumNative={estimatedMaximumNative}
-              estimatedMinimumNative={estimatedMinimumNative}
-              isGasEstimatesLoading={isGasEstimatesLoading}
-              gasEstimateType={gasEstimateType}
               gasPrice={gasPrice}
               setGasPrice={setGasPrice}
               gasLimit={gasLimit}
               setGasLimit={setGasLimit}
               properGasLimit={properGasLimit}
               estimateToUse={estimateToUse}
-              setEstimateToUse={setEstimateToUse}
-              estimatedMinimumFiat={estimatedMinimumFiat}
-              estimatedMaximumFiat={estimatedMaximumFiat}
-              onEducationClick={() => setShowEducationContent(true)}
               mode={mode}
               transaction={updatedTransaction}
-              gasErrors={gasErrors}
-              gasWarnings={gasWarnings}
               onManualChange={onManualChange}
               minimumGasLimit={minimumGasLimitDec}
               balanceError={balanceError}

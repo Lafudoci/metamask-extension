@@ -9,16 +9,10 @@ import {
   getMinimumGasTotalInHexWei,
 } from '../../../shared/modules/gas.utils';
 
-import { PRIMARY, SECONDARY } from '../../helpers/constants/common';
-import {
-  checkNetworkAndAccountSupports1559,
-  getShouldShowFiat,
-} from '../../selectors';
+import { checkNetworkAndAccountSupports1559 } from '../../selectors';
 import { decGWEIToHexWEI } from '../../helpers/utils/conversions.util';
 import { isLegacyTransaction } from '../../helpers/utils/transactions.util';
 
-import { useCurrencyDisplay } from '../useCurrencyDisplay';
-import { useUserPreferencedCurrency } from '../useUserPreferencedCurrency';
 import { decimalToHex } from '../../../shared/lib/transactions-controller-utils';
 
 /**
@@ -64,16 +58,6 @@ export function useGasEstimates({
     useSelector(checkNetworkAndAccountSupports1559) &&
     !isLegacyTransaction(transaction?.txParams);
 
-  const { currency: fiatCurrency, numberOfDecimals: fiatNumberOfDecimals } =
-    useUserPreferencedCurrency(SECONDARY);
-
-  const showFiat = useSelector(getShouldShowFiat);
-
-  const {
-    currency: primaryCurrency,
-    numberOfDecimals: primaryNumberOfDecimals,
-  } = useUserPreferencedCurrency(PRIMARY);
-
   // We have two helper methods that take an object that can have either
   // gasPrice OR the EIP-1559 fields on it, plus gasLimit. This object is
   // conditionally set to the appropriate fields to compute the minimum
@@ -113,41 +97,7 @@ export function useGasEstimates({
   // The minimum amount this transaction will cost
   const minimumCostInHexWei = getMinimumGasTotalInHexWei(gasSettings);
 
-  // The estimated total amount of native currency that will be expended
-  // given the selected gas fees.
-  const [estimatedMaximumNative] = useCurrencyDisplay(maximumCostInHexWei, {
-    numberOfDecimals: primaryNumberOfDecimals,
-    currency: primaryCurrency,
-  });
-
-  const [, { value: estimatedMaximumFiat }] = useCurrencyDisplay(
-    maximumCostInHexWei,
-    {
-      numberOfDecimals: fiatNumberOfDecimals,
-      currency: fiatCurrency,
-    },
-  );
-
-  const [estimatedMinimumNative] = useCurrencyDisplay(minimumCostInHexWei, {
-    numberOfDecimals: primaryNumberOfDecimals,
-    currency: primaryCurrency,
-  });
-
-  // We also need to display our closest estimate of the low end of estimation
-  // in fiat.
-  const [, { value: estimatedMinimumFiat }] = useCurrencyDisplay(
-    minimumCostInHexWei,
-    {
-      numberOfDecimals: fiatNumberOfDecimals,
-      currency: fiatCurrency,
-    },
-  );
-
   return {
-    estimatedMaximumFiat: showFiat ? estimatedMaximumFiat : '',
-    estimatedMinimumFiat: showFiat ? estimatedMinimumFiat : '',
-    estimatedMaximumNative,
-    estimatedMinimumNative,
     estimatedBaseFee: supportsEIP1559
       ? decGWEIToHexWEI(gasFeeEstimates.estimatedBaseFee ?? '0')
       : undefined,

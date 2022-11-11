@@ -1,17 +1,13 @@
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
-import { addHexPrefix } from 'ethereumjs-util';
-
 import { SECONDARY } from '../../helpers/constants/common';
 import {
   checkNetworkAndAccountSupports1559,
   getShouldShowFiat,
 } from '../../selectors';
 import { isLegacyTransaction } from '../../helpers/utils/transactions.util';
-import { multiplyCurrencies } from '../../../shared/modules/conversion.utils';
 
-import { useCurrencyDisplay } from '../useCurrencyDisplay';
 import { useUserPreferencedCurrency } from '../useUserPreferencedCurrency';
 import { hexWEIToDecGWEI } from '../../../shared/lib/transactions-controller-utils';
 import { feeParamsAreCustom, getGasFeeEstimate } from './utils';
@@ -54,7 +50,6 @@ export function useMaxPriorityFeePerGasInput({
   estimateToUse,
   gasEstimateType,
   gasFeeEstimates,
-  gasLimit,
   transaction,
 }) {
   const supportsEIP1559 =
@@ -93,27 +88,8 @@ export function useMaxPriorityFeePerGasInput({
       initialMaxPriorityFeePerGas || 0,
     );
 
-  // We need to display the estimated fiat currency impact of the
-  // maxPriorityFeePerGas field to the user. This hook calculates that amount.
-  const [, { value: maxPriorityFeePerGasFiat }] = useCurrencyDisplay(
-    addHexPrefix(
-      multiplyCurrencies(maxPriorityFeePerGasToUse, gasLimit, {
-        toNumericBase: 'hex',
-        fromDenomination: 'GWEI',
-        toDenomination: 'WEI',
-        multiplicandBase: 10,
-        multiplierBase: 10,
-      }),
-    ),
-    {
-      numberOfDecimals: fiatNumberOfDecimals,
-      currency: fiatCurrency,
-    },
-  );
-
   return {
     maxPriorityFeePerGas: maxPriorityFeePerGasToUse,
-    maxPriorityFeePerGasFiat: showFiat ? maxPriorityFeePerGasFiat : '',
     setMaxPriorityFeePerGas,
   };
 }
