@@ -113,13 +113,9 @@ export function useGasFeeInputs(
     ? retryTxMeta
     : _transaction;
 
-  const eip1559V2Enabled = useSelector(getEIP1559V2Enabled);
-
   const supportsEIP1559 =
     useSelector(checkNetworkAndAccountSupports1559) &&
     !isLegacyTransaction(transaction?.txParams);
-
-  const supportsEIP1559V2 = supportsEIP1559 && eip1559V2Enabled;
 
   // We need the gas estimates from the GasFeeController in the background.
   // Calling this hooks initiates polling for new gas estimates and returns the
@@ -171,7 +167,7 @@ export function useGasFeeInputs(
    * so that transaction is source of truth whenever possible.
    */
   useEffect(() => {
-    if (supportsEIP1559V2) {
+    if (supportsEIP1559) {
       if (transaction?.userFeeLevel) {
         setEstimateUsed(transaction?.userFeeLevel);
         setInternalEstimateToUse(transaction?.userFeeLevel);
@@ -182,7 +178,7 @@ export function useGasFeeInputs(
     setEstimateUsed,
     setGasLimit,
     setInternalEstimateToUse,
-    supportsEIP1559V2,
+    supportsEIP1559,
     transaction,
   ]);
 
@@ -201,7 +197,6 @@ export function useGasFeeInputs(
       gasFeeEstimates,
       gasLimit,
       gasPrice,
-      supportsEIP1559V2,
       transaction,
     });
 
@@ -214,7 +209,7 @@ export function useGasFeeInputs(
     gasEstimateType,
     gasFeeEstimates,
     gasLimit,
-    supportsEIP1559V2,
+    supportsEIP1559,
     transaction,
   });
 
@@ -378,7 +373,6 @@ export function useGasFeeInputs(
     hasSimulationError,
     minimumGasLimitDec: hexToDecimal(minimumGasLimit),
     supportsEIP1559,
-    supportsEIP1559V2,
     cancelTransaction,
     speedUpTransaction,
     updateTransaction,
