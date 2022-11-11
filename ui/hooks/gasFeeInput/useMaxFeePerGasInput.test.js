@@ -1,20 +1,15 @@
-import { useSelector } from 'react-redux';
 import { act, renderHook } from '@testing-library/react-hooks';
 
-import { getMaximumGasTotalInHexWei } from '../../../shared/modules/gas.utils';
 import {
   GAS_RECOMMENDATIONS,
   CUSTOM_GAS_ESTIMATE,
 } from '../../../shared/constants/gas';
 
-import { decimalToHex } from '../../../shared/lib/transactions-controller-utils';
 import {
   FEE_MARKET_ESTIMATE_RETURN_VALUE,
   LEGACY_GAS_ESTIMATE_RETURN_VALUE,
   configureEIP1559,
   configureLegacy,
-  convertFromHexToFiat,
-  generateUseSelectorRouter,
 } from './test-utils';
 import { useMaxFeePerGasInput } from './useMaxFeePerGasInput';
 

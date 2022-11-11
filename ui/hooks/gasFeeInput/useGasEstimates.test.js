@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { renderHook } from '@testing-library/react-hooks';
 import {
   getMaximumGasTotalInHexWei,
@@ -12,8 +11,6 @@ import {
   configureEIP1559,
   configureLegacy,
   convertFromHexToETH,
-  convertFromHexToFiat,
-  generateUseSelectorRouter,
 } from './test-utils';
 import { useGasEstimates } from './useGasEstimates';
 
@@ -71,9 +68,6 @@ describe('useGasEstimates', () => {
       });
 
       expect(result.current.minimumCostInHexWei).toBe(minimumHexValue);
-      expect(result.current.estimatedMinimumNative).toBe(
-        convertFromHexToETH(minimumHexValue),
-      );
     });
 
     it('uses new EIP-1559 gas fields to calculate maximum values', () => {

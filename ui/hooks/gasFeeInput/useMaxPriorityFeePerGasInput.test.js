@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { act, renderHook } from '@testing-library/react-hooks';
 
 import {
@@ -10,8 +9,6 @@ import {
   LEGACY_GAS_ESTIMATE_RETURN_VALUE,
   configureEIP1559,
   configureLegacy,
-  convertFromHexToFiat,
-  generateUseSelectorRouter,
 } from './test-utils';
 import { useMaxPriorityFeePerGasInput } from './useMaxPriorityFeePerGasInput';
 
