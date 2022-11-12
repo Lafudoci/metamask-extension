@@ -491,7 +491,7 @@ class FixtureBuilder {
 
   withNonEIP1559Network() {
     return this.withNetworkController({
-      EIPS: { 1559: undefined },
+      EIPS: { 1559: false },
     });
   }
 
