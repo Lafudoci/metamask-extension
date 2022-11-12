@@ -1371,9 +1371,6 @@
     "message": "Ang gas fee na ito ay iminungkahi ng $1. Ang pag-override dito ay maaaring magdulot ng problema sa iyong transaksyon. Mangyaring makipag-ugnayan sa $1 kung mayroon kang mga tanong.",
     "description": "$1 represents the Dapp's origin"
   },
-  "gasEstimatesUnavailableWarning": {
-    "message": "Ang aming low, medium at high na mga pagtantiya ay hindi available."
-  },
   "gasFee": {
     "message": "Bayarin sa Gas"
   },

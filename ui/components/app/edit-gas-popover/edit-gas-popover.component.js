@@ -80,7 +80,6 @@ export default function EditGasPopover({
     gasErrors,
     onManualChange,
     balanceError,
-    estimatesUnavailableWarning,
     estimatedBaseFee,
     isNetworkBusy,
   } = useGasFeeInputs(
@@ -238,7 +237,6 @@ export default function EditGasPopover({
               onManualChange={onManualChange}
               minimumGasLimit={minimumGasLimitDec}
               balanceError={balanceError}
-              estimatesUnavailableWarning={estimatesUnavailableWarning}
               hasGasErrors={hasGasErrors}
               txParamsHaveBeenCustomized={txParamsHaveBeenCustomized}
               isNetworkBusy={isNetworkBusy}

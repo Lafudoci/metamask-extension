@@ -1371,9 +1371,6 @@
     "message": "Biaya gas ini telah disarankan oleh $1. Pengabaian dapat menyebabkan masalah pada transaksi Anda. Hubungi $1 jika ada pertanyaan.",
     "description": "$1 represents the Dapp's origin"
   },
-  "gasEstimatesUnavailableWarning": {
-    "message": "Estimasi rendah, sedang, dan tinggi kami tidak tersedia."
-  },
   "gasFee": {
     "message": "Biaya gas"
   },

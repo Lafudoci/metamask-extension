@@ -160,8 +160,6 @@ const hasBalanceError = (minimumCostInHexWei, transaction, ethBalance) => {
  * @property {boolean} [hasGasErrors] - true if there are errors that can block submission.
  * @property {object} gasWarnings - map of gas warnings for EIP-1559 fields.
  * @property {boolean} [balanceError] - true if user balance is less than transaction value.
- * @property {boolean} [estimatesUnavailableWarning] - true if supportsEIP1559 is true and
- * estimate is not of type fee-market.
  */
 
 /**
@@ -269,8 +267,9 @@ export function useGasFeeErrors({
     return warnings;
   }, [maxPriorityFeeWarning, maxFeeWarning]);
 
-  const estimatesUnavailableWarning =
-    supportsEIP1559 && !isFeeMarketGasEstimate;
+  // Field is no longer used in latest 1559 designs
+  // const estimatesUnavailableWarning =
+  //   supportsEIP1559 && !isFeeMarketGasEstimate;
 
   // Determine if we have any errors which should block submission
   const hasGasErrors = Boolean(Object.keys(gasErrors).length);
@@ -296,7 +295,6 @@ export function useGasFeeErrors({
     gasErrors: errorsAndWarnings,
     hasGasErrors,
     balanceError,
-    estimatesUnavailableWarning,
     hasSimulationError: Boolean(transaction?.simulationFails),
   };
 }

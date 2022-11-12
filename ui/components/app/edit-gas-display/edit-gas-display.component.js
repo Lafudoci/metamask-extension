@@ -41,7 +41,6 @@ export default function EditGasDisplay({
   onManualChange,
   minimumGasLimit,
   balanceError,
-  estimatesUnavailableWarning,
   gasErrors,
   hasGasErrors,
   txParamsHaveBeenCustomized,
@@ -82,14 +81,11 @@ export default function EditGasDisplay({
   }
 
   const showTopError =
-    (balanceError || estimatesUnavailableWarning) &&
-    (!isGasEstimatesLoading || txParamsHaveBeenCustomized);
+    balanceError && (!isGasEstimatesLoading || txParamsHaveBeenCustomized);
 
   let errorKey;
   if (balanceError) {
     errorKey = 'insufficientFunds';
-  } else if (estimatesUnavailableWarning) {
-    errorKey = 'gasEstimatesUnavailableWarning';
   }
 
   return (
@@ -156,7 +152,6 @@ export default function EditGasDisplay({
         {!requireDappAcknowledgement &&
           (showAdvancedForm ||
             hasGasErrors ||
-            estimatesUnavailableWarning ||
             showAdvancedInlineGasIfPossible) && (
             <AdvancedGasControls
               gasLimit={gasLimit}
@@ -188,7 +183,6 @@ EditGasDisplay.propTypes = {
   onManualChange: PropTypes.func,
   minimumGasLimit: PropTypes.string,
   balanceError: PropTypes.bool,
-  estimatesUnavailableWarning: PropTypes.bool,
   hasGasErrors: PropTypes.bool,
   gasErrors: PropTypes.object,
   txParamsHaveBeenCustomized: PropTypes.bool,

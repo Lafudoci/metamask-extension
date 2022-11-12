@@ -1371,9 +1371,6 @@
     "message": "Esta tarifa de gas ha sido sugerida por $1. Anularla puede causar un problema con su transacción. Comuníquese con $1 si tiene preguntas.",
     "description": "$1 represents the Dapp's origin"
   },
-  "gasEstimatesUnavailableWarning": {
-    "message": "Nuestras estimaciones bajas, medias y altas no están disponibles."
-  },
   "gasFee": {
     "message": "Cuota de gas"
   },

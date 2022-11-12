@@ -212,24 +212,19 @@ export function useGasFeeInputs(
       transaction,
     });
 
-  const {
-    balanceError,
-    estimatesUnavailableWarning,
-    gasErrors,
-    hasGasErrors,
-    hasSimulationError,
-  } = useGasFeeErrors({
-    gasEstimateType,
-    gasFeeEstimates,
-    isGasEstimatesLoading,
-    gasLimit,
-    gasPrice,
-    maxPriorityFeePerGas,
-    maxFeePerGas,
-    minimumCostInHexWei,
-    minimumGasLimit,
-    transaction,
-  });
+  const { balanceError, gasErrors, hasGasErrors, hasSimulationError } =
+    useGasFeeErrors({
+      gasEstimateType,
+      gasFeeEstimates,
+      isGasEstimatesLoading,
+      gasLimit,
+      gasPrice,
+      maxPriorityFeePerGas,
+      maxFeePerGas,
+      minimumCostInHexWei,
+      minimumGasLimit,
+      transaction,
+    });
 
   const handleGasLimitOutOfBoundError = useCallback(() => {
     if (gasErrors.gasLimit === GAS_FORM_ERRORS.GAS_LIMIT_OUT_OF_BOUNDS) {
@@ -306,7 +301,6 @@ export function useGasFeeInputs(
     estimatedBaseFee,
     // error and warnings
     balanceError,
-    estimatesUnavailableWarning,
     hasGasErrors,
     hasSimulationError,
     minimumGasLimitDec: hexToDecimal(minimumGasLimit),

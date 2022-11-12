@@ -294,23 +294,4 @@ describe('useGasFeeErrors', () => {
       expect(result.current.hasSimulationError).toBe(true);
     });
   });
-
-  describe('estimatesUnavailableWarning', () => {
-    it('is false if supportsEIP1559 and gasEstimateType is fee-market', () => {
-      configureEIP1559();
-      const { result } = renderUseGasFeeErrorsHook();
-      expect(result.current.estimatesUnavailableWarning).toBe(false);
-    });
-    it('is true if supportsEIP1559 and gasEstimateType is not fee-market', () => {
-      useSelector.mockImplementation(
-        generateUseSelectorRouter({
-          checkNetworkAndAccountSupports1559Response: true,
-        }),
-      );
-      const { result } = renderUseGasFeeErrorsHook(
-        LEGACY_GAS_ESTIMATE_RETURN_VALUE,
-      );
-      expect(result.current.estimatesUnavailableWarning).toBe(true);
-    });
-  });
 });

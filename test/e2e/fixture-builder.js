@@ -1,3 +1,4 @@
+const { MethodRegistry } = require('eth-method-registry');
 const { merge } = require('lodash');
 
 function defaultFixture() {
@@ -463,6 +464,38 @@ class FixtureBuilder {
   withPermissionController(data) {
     merge(this.fixture.data.PermissionController, data);
     return this;
+  }
+
+  withNetworkBusy() {
+    merge(this.fixture.data.GasFeeController, {
+      gasFeeEstimates: {
+        low: {
+          minWaitTimeEstimate: 180000,
+          maxWaitTimeEstimate: 300000,
+          suggestedMaxPriorityFeePerGas: '3',
+          suggestedMaxFeePerGas: '53',
+        },
+        medium: {
+          minWaitTimeEstimate: 15000,
+          maxWaitTimeEstimate: 60000,
+          suggestedMaxPriorityFeePerGas: '7',
+          suggestedMaxFeePerGas: '70',
+        },
+        high: {
+          minWaitTimeEstimate: 0,
+          maxWaitTimeEstimate: 15000,
+          suggestedMaxPriorityFeePerGas: '10',
+          suggestedMaxFeePerGas: '100',
+        },
+        estimatedBaseFee: '50',
+        historicalBaseFeeRange: ['28.533098435', '70.351148354'],
+        baseFeeTrend: 'up',
+        latestPriorityFeeRange: ['1', '40'],
+        historicalPriorityFeeRange: ['0.1458417', '700.156384646'],
+        priorityFeeTrend: 'down',
+        networkCongestion: 0.66,
+      },
+    });
   }
 
   withPermissionControllerConnectedToTestDapp() {

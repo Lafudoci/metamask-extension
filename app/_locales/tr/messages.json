@@ -1371,9 +1371,6 @@
     "message": "Bu gaz ücreti $1 tarafından önerilmiştir. Bu değerin başka bir değerle değiştirilmesi işleminizle ilgili bir soruna neden olabilir. Sorularınız olursa lütfen $1 ile iletişime geçin.",
     "description": "$1 represents the Dapp's origin"
   },
-  "gasEstimatesUnavailableWarning": {
-    "message": "Düşük, orta ve yüksek tahminlerimiz mevcut değil."
-  },
   "gasFee": {
     "message": "Gaz Ücreti"
   },

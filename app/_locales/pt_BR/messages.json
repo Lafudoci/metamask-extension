@@ -1067,9 +1067,6 @@
     "message": "Essa taxa de gás foi sugerida por $1. Sua substituição pode causar um problema com a sua transação. Entre em contato com $1 se tiver perguntas.",
     "description": "$1 represents the Dapp's origin"
   },
-  "gasEstimatesUnavailableWarning": {
-    "message": "Nossas estimativas baixas, médias e altas não estão disponíveis."
-  },
   "gasLimit": {
     "message": "Limite de gás"
   },
