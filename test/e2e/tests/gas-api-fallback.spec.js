@@ -51,7 +51,7 @@ describe('Gas API fallback', function () {
         await inputAmount.fill('1');
 
         await driver.clickElement({ text: 'Next', tag: 'button' });
-        await driver.clickElement({ text: 'Edit', tag: 'button' });
+        await driver.clickElement({ text: 'Medium', tag: 'button' });
 
         const error = await driver.isElementPresent('.error-message__text');
         const gasRecommendation = await driver.isElementPresent(
