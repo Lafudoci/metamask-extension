@@ -1,4 +1,3 @@
-const { MethodRegistry } = require('eth-method-registry');
 const { merge } = require('lodash');
 
 function defaultFixture() {

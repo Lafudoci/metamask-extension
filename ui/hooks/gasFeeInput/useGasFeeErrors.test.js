@@ -1,5 +1,4 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useSelector } from 'react-redux';
 
 import { GAS_FORM_ERRORS } from '../../helpers/constants/gas';
 
@@ -10,7 +9,6 @@ import {
   LEGACY_GAS_ESTIMATE_RETURN_VALUE,
   configureEIP1559,
   configureLegacy,
-  generateUseSelectorRouter,
 } from './test-utils';
 
 jest.mock('../useGasFeeEstimates', () => ({
