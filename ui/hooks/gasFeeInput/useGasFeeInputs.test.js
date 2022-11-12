@@ -89,16 +89,10 @@ describe('useGasFeeInputs', () => {
         LEGACY_GAS_ESTIMATE_RETURN_VALUE.gasFeeEstimates.medium,
         result.current.gasLimit,
       );
-      let totalFiat = (
-        Number(totalEthGasFee) * MOCK_ETH_USD_CONVERSION_RATE
-      ).toFixed(2);
       act(() => {
         result.current.setGasPrice('30');
       });
       totalEthGasFee = getTotalCostInETH('30', result.current.gasLimit);
-      totalFiat = (
-        Number(totalEthGasFee) * MOCK_ETH_USD_CONVERSION_RATE
-      ).toFixed(2);
       expect(result.current.gasPrice).toBe('30');
     });
   });

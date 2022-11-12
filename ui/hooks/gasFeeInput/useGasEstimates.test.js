@@ -10,7 +10,6 @@ import {
   LEGACY_GAS_ESTIMATE_RETURN_VALUE,
   configureEIP1559,
   configureLegacy,
-  convertFromHexToETH,
 } from './test-utils';
 import { useGasEstimates } from './useGasEstimates';
 
