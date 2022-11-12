@@ -489,6 +489,12 @@ class FixtureBuilder {
     });
   }
 
+  withNonEIP1559Network() {
+    return this.withNetworkController({
+      EIPS: { 1559: undefined },
+    });
+  }
+
   withPermissionControllerConnectedToSnapDapp() {
     return this.withPermissionController({
       subjects: {
