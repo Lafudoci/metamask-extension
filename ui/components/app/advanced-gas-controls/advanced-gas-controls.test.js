@@ -18,4 +18,10 @@ describe('AdvancedGasControls Component', () => {
       renderComponent();
     }).not.toThrow();
   });
+
+  it('should render gasLimit and gasPrice inputs', () => {
+    const { queryByText } = renderComponent({ supportsEIP1559: false });
+    expect(queryByText('Gas limit')).toBeInTheDocument();
+    expect(queryByText('Gas price')).toBeInTheDocument();
+  });
 });
