@@ -13,7 +13,6 @@ import { useGasFeeEstimates } from '../useGasFeeEstimates';
 import { useGasFeeInputs } from './useGasFeeInputs';
 
 import {
-  MOCK_ETH_USD_CONVERSION_RATE,
   LEGACY_GAS_ESTIMATE_RETURN_VALUE,
   FEE_MARKET_ESTIMATE_RETURN_VALUE,
   HIGH_FEE_MARKET_ESTIMATE_RETURN_VALUE,
@@ -82,14 +81,9 @@ describe('useGasFeeInputs', () => {
       expect(result.current.gasPrice).toBe(
         LEGACY_GAS_ESTIMATE_RETURN_VALUE.gasFeeEstimates.medium,
       );
-      let totalEthGasFee = getTotalCostInETH(
-        LEGACY_GAS_ESTIMATE_RETURN_VALUE.gasFeeEstimates.medium,
-        result.current.gasLimit,
-      );
       act(() => {
         result.current.setGasPrice('30');
       });
-      totalEthGasFee = getTotalCostInETH('30', result.current.gasLimit);
       expect(result.current.gasPrice).toBe('30');
     });
   });

@@ -49,7 +49,10 @@ const EditGasFeePopover = () => {
       <>
         <AppLoadingSpinner />
         <div className="edit-gas-fee-popover__wrapper">
-          <div className="edit-gas-fee-popover__content">
+          <div
+            data-testid="gas-recommendation"
+            className="edit-gas-fee-popover__content"
+          >
             <Box>
               {balanceError && (
                 <ErrorMessage errorKey={INSUFFICIENT_FUNDS_ERROR_KEY} />
