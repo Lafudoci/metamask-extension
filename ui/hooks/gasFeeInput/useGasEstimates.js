@@ -17,16 +17,8 @@ import { decimalToHex } from '../../../shared/lib/transactions-controller-utils'
 
 /**
  * @typedef {object} GasEstimatesReturnType
- * @property {string} [estimatedMinimumFiat] - The amount estimated to be paid
- *  based on current network conditions. Expressed in user's preferred currency.
- * @property {string} [estimatedMaximumFiat] - the maximum amount estimated to be paid if current
- *  network transaction volume increases. Expressed in user's preferred currency.
- * @property {string} [estimatedMaximumNative] - the maximum amount estimated to be paid if the
- *  current network transaction volume increases. Expressed in the network's native currency.
- * @property {string} [estimatedMinimumNative] - the maximum amount estimated to be paid if the
- *  current network transaction volume increases. Expressed in the network's native currency.
- * @property {HexWeiString} [estimatedBaseFee] - estimatedBaseFee from fee-market gasFeeEstimates
- *  in HexWei.
+ * @property {string} [estimatedBaseFee] - Estimated base fee.
+ * @property {HexWeiString} [maximumCostInHexWei] - the maximum amount this transaction will cost.
  * @property {HexWeiString} [minimumCostInHexWei] - the minimum amount this transaction will cost.
  */
 

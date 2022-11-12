@@ -233,7 +233,7 @@ describe('TransactionAlerts', () => {
     });
 
     describe('if the length of pendingTransactions is at least 1', () => {
-      it('informs the user that they have a pending transaction', () => {
+      it('does not informs the user that they have a pending transaction', () => {
         const { queryByText } = render({
           useGasFeeContextValue: { supportsEIP1559: false },
           submittedPendingTransactionsSelectorValue: [{ some: 'transaction' }],

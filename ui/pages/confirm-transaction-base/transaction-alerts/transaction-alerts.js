@@ -38,7 +38,7 @@ const TransactionAlerts = ({
           }
         />
       )}
-      {pendingTransactions?.length > 0 && (
+      {supportsEIP1559 && pendingTransactions?.length > 0 && (
         <ActionableMessage
           message={
             <Typography
@@ -91,7 +91,7 @@ const TransactionAlerts = ({
           type="warning"
         />
       )}
-      {isNetworkBusy ? (
+      {supportsEIP1559 && isNetworkBusy ? (
         <ActionableMessage
           message={
             <Typography

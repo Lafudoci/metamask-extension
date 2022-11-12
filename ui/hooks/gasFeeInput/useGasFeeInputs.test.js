@@ -64,7 +64,6 @@ describe('useGasFeeInputs', () => {
       expect(result.current.gasEstimateType).toBe(
         LEGACY_GAS_ESTIMATE_RETURN_VALUE.gasEstimateType,
       );
-      expect(result.current.estimatedGasFeeTimeBounds).toMatchObject({});
     });
 
     it('returns gasPrice appropriately, and "0" for EIP1559 fields', () => {
@@ -93,11 +92,6 @@ describe('useGasFeeInputs', () => {
       let totalFiat = (
         Number(totalEthGasFee) * MOCK_ETH_USD_CONVERSION_RATE
       ).toFixed(2);
-      expect(result.current.estimatedMaximumNative).toBe(
-        `${totalEthGasFee} ETH`,
-      );
-      expect(result.current.estimatedMaximumFiat).toBe(`$${totalFiat}`);
-      expect(result.current.estimatedMinimumFiat).toBe(`$${totalFiat}`);
       act(() => {
         result.current.setGasPrice('30');
       });
@@ -106,11 +100,6 @@ describe('useGasFeeInputs', () => {
         Number(totalEthGasFee) * MOCK_ETH_USD_CONVERSION_RATE
       ).toFixed(2);
       expect(result.current.gasPrice).toBe('30');
-      expect(result.current.estimatedMaximumNative).toBe(
-        `${totalEthGasFee} ETH`,
-      );
-      expect(result.current.estimatedMaximumFiat).toBe(`$${totalFiat}`);
-      expect(result.current.estimatedMinimumFiat).toBe(`$${totalFiat}`);
     });
   });
 
@@ -149,7 +138,6 @@ describe('useGasFeeInputs', () => {
       expect(result.current.gasEstimateType).toBe(
         FEE_MARKET_ESTIMATE_RETURN_VALUE.gasEstimateType,
       );
-      expect(result.current.estimatedGasFeeTimeBounds).toMatchObject({});
     });
 
     it('returns EIP-1559 fields appropriately, and "0" for gasPrice fields', () => {

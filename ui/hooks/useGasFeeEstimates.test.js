@@ -107,7 +107,6 @@ describe('useGasFeeEstimates', () => {
     expect(current).toMatchObject({
       gasFeeEstimates: DEFAULT_OPTS.gasFeeEstimates,
       gasEstimateType: GAS_ESTIMATE_TYPES.LEGACY,
-      estimatedGasFeeTimeBounds: undefined,
       isGasEstimatesLoading: false,
     });
   });
@@ -128,7 +127,6 @@ describe('useGasFeeEstimates', () => {
     expect(current).toMatchObject({
       gasFeeEstimates,
       gasEstimateType: GAS_ESTIMATE_TYPES.ETH_GASPRICE,
-      estimatedGasFeeTimeBounds: undefined,
       isGasEstimatesLoading: false,
     });
   });

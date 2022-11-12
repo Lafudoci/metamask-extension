@@ -80,9 +80,7 @@ describe('useGasEstimates', () => {
         gasLimit: decimalToHex(gasLimit),
         maxFeePerGas: decGWEIToHexWEI(maxFeePerGas),
       });
-      expect(result.current.estimatedMaximumNative).toBe(
-        convertFromHexToETH(maximumHexValue),
-      );
+      expect(result.current.maximumCostInHexWei).toBe(maximumHexValue);
     });
 
     it('uses gasFeeEstimates.estimatedBaseFee prop to calculate estimatedBaseFee', () => {
@@ -117,9 +115,6 @@ describe('useGasEstimates', () => {
       });
 
       expect(result.current.minimumCostInHexWei).toBe(minimumHexValue);
-      expect(result.current.estimatedMinimumNative).toBe(
-        convertFromHexToETH(minimumHexValue),
-      );
     });
 
     it('uses legacy gas fields to calculate maximum values', () => {
@@ -137,9 +132,7 @@ describe('useGasEstimates', () => {
         gasLimit: decimalToHex(gasLimit),
         gasPrice: decGWEIToHexWEI(gasPrice),
       });
-      expect(result.current.estimatedMaximumNative).toBe(
-        convertFromHexToETH(maximumHexValue),
-      );
+      expect(result.current.maximumCostInHexWei).toBe(maximumHexValue);
     });
 
     it('estimatedBaseFee is undefined', () => {
