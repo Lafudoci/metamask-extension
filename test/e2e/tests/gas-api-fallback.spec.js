@@ -30,7 +30,7 @@ describe('Gas API fallback', function () {
   it('error message is displayed but gas recommendation is not displayed', async function () {
     await withFixtures(
       {
-        fixtures: new FixtureBuilder().withNonEIP1559Network().build(),
+        fixtures: new FixtureBuilder().withNetworkBusy().build(),
         testSpecificMock: mockGasApiDown,
         ganacheOptions,
         title: this.test.title,
