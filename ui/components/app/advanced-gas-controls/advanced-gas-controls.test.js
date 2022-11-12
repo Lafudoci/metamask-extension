@@ -20,7 +20,7 @@ describe('AdvancedGasControls Component', () => {
   });
 
   it('should render gasLimit and gasPrice inputs', () => {
-    const { queryByText } = renderComponent({ supportsEIP1559: false });
+    const { queryByText } = renderComponent();
     expect(queryByText('Gas limit')).toBeInTheDocument();
     expect(queryByText('Gas price')).toBeInTheDocument();
   });
