@@ -495,6 +495,7 @@ class FixtureBuilder {
         networkCongestion: 0.66,
       },
     });
+    return this;
   }
 
   withPermissionControllerConnectedToTestDapp() {
