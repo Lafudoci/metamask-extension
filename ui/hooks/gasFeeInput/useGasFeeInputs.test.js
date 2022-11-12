@@ -19,7 +19,6 @@ import {
   configureEIP1559,
   configureLegacy,
   generateUseSelectorRouter,
-  getTotalCostInETH,
 } from './test-utils';
 
 jest.mock('../useUserPreferencedCurrency', () => ({
