@@ -61,9 +61,6 @@ describe('useGasFeeInputs', () => {
       expect(result.current.gasFeeEstimates).toMatchObject(
         LEGACY_GAS_ESTIMATE_RETURN_VALUE.gasFeeEstimates,
       );
-      expect(result.current.gasEstimateType).toBe(
-        LEGACY_GAS_ESTIMATE_RETURN_VALUE.gasEstimateType,
-      );
     });
 
     it('returns gasPrice appropriately, and "0" for EIP1559 fields', () => {
@@ -128,9 +125,6 @@ describe('useGasFeeInputs', () => {
       const { result } = renderHook(() => useGasFeeInputs());
       expect(result.current.gasFeeEstimates).toMatchObject(
         FEE_MARKET_ESTIMATE_RETURN_VALUE.gasFeeEstimates,
-      );
-      expect(result.current.gasEstimateType).toBe(
-        FEE_MARKET_ESTIMATE_RETURN_VALUE.gasEstimateType,
       );
     });
 
