@@ -50,6 +50,8 @@ const TREZOR_TESTNET_PATH = `m/44'/1'/0'/0`;
 const TREZOR_HD_PATHS = [
   { name: `BIP44 Standard (e.g. MetaMask, Trezor)`, value: BIP44_PATH },
   { name: `Trezor Testnets`, value: TREZOR_TESTNET_PATH },
+  { name: 'Ledger Live', value: LEDGER_LIVE_PATH },
+  { name: 'Legacy (MEW / MyCrypto)', value: MEW_PATH },
 ];
 
 const HD_PATHS = {
